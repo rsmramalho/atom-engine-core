@@ -221,3 +221,13 @@ NEXT:
 
 
 [Partes 4-12 continuam com o conteúdo completo do v4.2 conforme o documento anexo]
+
+---
+
+### Nota de clarificação — AtomModule enum
+
+Os valores válidos de `module` são: `work`, `body`, `mind`, `family`, `purpose`, `bridge`, `finance`, `social`.
+
+> ⚠️ ATENÇÃO: o campo `module` usa SEMPRE o valor sem prefixo.
+> CORRETO: `module: body` | ERRADO: `module: mod-body`
+> "mod-body" existe como nome de pasta e como prefixo de tag (`#mod_body`) — não como valor de enum.

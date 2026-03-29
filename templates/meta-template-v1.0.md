@@ -259,8 +259,20 @@ ID format:            UUID v4 (ex: f47ac10b-58cc-4372-a567-0e02b2c3d479)
 
 
 Exemplos:
-- "Carbonara Clássica" → `recipe_carbonara-classica_2026-03-29.md`
-- "GitHub Repo Task" → `task_github-repo-task_2026-03-29.md`
+- "Carbonara Clássica" → `mod-body_recipe_carbonara-classica.md`
+- "GitHub Repo Task" → `mod-work_task_github-repo.md`
+- "Checkpoint Atom Engine" → `mod-work_checkpoint_atom-engine_2026-03-29.md`
+
+> ⚠️ REGRA CRÍTICA — versão só em docs que evoluem:
+> - CORRETO: `mod-body_recommendation_izakaya-brisbane.md` (sem versão — item atemporal)
+> - CORRETO: `mod-body_recipe_carbonara-classica.md` (sem versão)
+> - CORRETO: `mod-mind_reflection_cansaco-construir.md` (sem versão)
+> - ERRADO: `mod-body_recommendation_izakaya_v1-0.md` (versão em item atemporal)
+> - CORRETO: `mod-work_spec_cockpit-modos_v1-0.md` (versão em spec — evolui)
+> - CORRETO: `system_template_checkpoint_v1-0.md` (versão em template — evolui)
+>
+> Receitas, reflexões, notas, tasks, recommendations = sem versão/data.
+> Specs, schemas, templates = com versão. Wraps, logs, checkpoints = com data.
 
 
 ---
