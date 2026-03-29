@@ -507,8 +507,17 @@ Olha o Graph View no Obsidian. Os nós conectados são reais. Cada checkpoint, c
 ### 4.7 "Quero trabalhar em tudo ao mesmo tempo"
 Escolhe UM projeto. Diz: "hoje é dia de [X]". Não troca até o wrap. Progresso real em um > progresso zero em cinco.
 
+### 4.8 "Coloquei algo no inbox do Drive — vai ser organizado?"
 
+Ainda não automático. O inbox/ no Drive é uma pasta, não um trigger.
 
+**Hoje (manual):**
+Captura direto aqui no chat: digita "inbox: [ideia]" e Claude processa na hora — classifica, nomeia, destino — sem passar pelo Drive.
+
+Para arquivos reais (PDFs, docs externos): coloca no inbox/ e avisa no próximo "bom dia". Claude processa no wrap.
+
+**Sprint 5 (automático):**
+n8n vai monitorar o inbox/, chamar a API, processar e mover sem intervenção humana. Até lá, o chat é o inbox.
 
 
 
@@ -634,7 +643,9 @@ Como todo Claude deve tratar o Rick:
 
 ```
 Atom Drive/
-├── inbox/                              — Captura rápida cai aqui
+├── inbox/    ← Captura rápida. Arquivos externos.
+│             ⚠️ Não monitora automaticamente (Sprint 5).
+│             Para ideias: captura direto no chat.
 │
 ├── mod-work/                           — Carreira, negócios, projetos profissionais
 │   ├── project-constellation-os/       — Sprint 8+
@@ -976,6 +987,7 @@ Auditoria só flaggeia como erro se:
 |--------|------|---------|
 | 1.0 | 2026-03-22 | Documento inicial — perfil + ritual + emails + sobrevivência + regras Claude + drive map |
 | 1.1 | 2026-03-23 | Adicionada seção 8: Auditoria do Drive (aurora + crepúsculo) |
+| 1.2 | 2026-03-29 | Seção 4.8: comportamento do inbox — workaround manual + roadmap Sprint 5 |
 
 
 
