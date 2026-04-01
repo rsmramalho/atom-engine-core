@@ -12,7 +12,7 @@
 ║           #milestone                 ║
 ║ source:   claude-project             ║
 ║ created:  2026-03-31                 ║
-║ updated:  2026-03-31                 ║
+║ updated:  2026-04-01                 ║
 ╠══════════════════════════════════════╣
 ║ connections:                         ║
 ║   → feeds: RM-ATOM-OS               ║
@@ -20,6 +20,7 @@
 ║   → feeds: RM-ATLAS-FRAMES          ║
 ║   → feeds: RM-MUDA                  ║
 ║   → feeds: RM-YUGAR                 ║
+║   → feeds: RM-VIDA                  ║
 ╚══════════════════════════════════════╝
 
 ## Master Plan — Ecossistema Pentágono (RM-MASTER)
@@ -33,7 +34,7 @@
 ### A Hierarquia
 
 ```
-Genesis v4.2.1 (a lei)
+Genesis v5.0.1 (a lei)
   └── Atom OS (Engine + MindRoot = protocolo + interface)
         └── Pentágono (5 vértices — o que o OS serve)
               ├── V1. Atom OS          — O Espelho     — serve o indivíduo
@@ -49,15 +50,15 @@ Genesis v4.2.1 (a lei)
 
 ### Base (fundação estável)
 
-- Genesis v4.2.1 + Schema v2
-- Marco Zero v1.3
-- Meta-Template v1.0
-- 12 templates Genesis v4.2 commitados
-- Atom Drive estruturado (8 módulos + system/)
+- Genesis v5.0.1 + Schema v2 (Knowledge base do Project Atom)
+- Marco Zero v2.0
+- Meta-Template v1.1
+- type-schemas.json com 23 types (mindroot/src/config/)
+- Supabase: 3 tabelas + triggers + RLS + RPCs + audit views
 - Supabase 3 tabelas deployed
 - GitHub rsmramalho/atom-engine-core
-- drive-tools.js operacional
-- MindRoot v1.0.0-alpha.25.2 live no Vercel
+
+- MindRoot branch ui-v2: Fases 0-3 implementadas (15 arquivos novos)
 - Atlas Frames faturando ~$2.5M/ano
 - Constellation OS Sprint 9 (72%)
 
@@ -68,7 +69,7 @@ Genesis v4.2.1 (a lei)
 | Track | Quando | O quê | Foco |
 |-------|--------|-------|------|
 | **CONSTRUIR** | Aurora (05h-08h) | Infra, automação, OS | Atom OS: RPCs, n8n, auto-triage, pipeline |
-| **OPERAR** | Zênite (08h-17h) | Dia a dia, projetos | Atlas, Constellation, ritual, captura |
+| **VIVER** | Zênite (08h-17h) | Dia a dia: projetos + vida pessoal (8 módulos) | Atlas, Constellation, ritual, captura |
 
 **Gate universal:** Se o ritual (aurora + wrap) quebra, ambos os trilhos pausam.
 
@@ -83,7 +84,7 @@ Genesis v4.2.1 (a lei)
 | C3 | **Consumidores reais** | Constellation via Schema v2. PHI-TIME extraído. DAG check. | C2 |
 | C4 | **Protocolo aberto** | Docs públicos. GitHub public. SDK/CLI. Muda como consumidor. | C3 |
 
-### OPERAR — Milestones (Zênite)
+### VIVER — Milestones (Zênite)
 
 | # | Milestone | O que entrega | Dependência |
 |---|-----------|--------------|-------------|
@@ -101,7 +102,7 @@ Os 5 vértices vivos e interconectados. O Atom OS é o tecido conjuntivo. Genesi
 
 ### Regras
 
-1. Dual-track sempre: CONSTRUIR (aurora) + OPERAR (zênite).
+1. Dual-track sempre: CONSTRUIR (aurora) + VIVER (zênite).
 2. Gate universal: ritual. Se aurora+wrap quebra, ambos pausam.
 3. Atlas nunca para. É o revenue engine.
 4. O triângulo antes de V4 e V5.
@@ -109,7 +110,7 @@ Os 5 vértices vivos e interconectados. O Atom OS é o tecido conjuntivo. Genesi
 6. Ideia nova → inbox. Não vira milestone.
 7. Cada RM-[SLUG] vive sozinho e se conecta aqui via belongs_to.
 8. Review trimestral.
-9. MindRoot = Atom OS. Um roadmap, um destino.
+9. MindRoot = Atom OS. Um roadmap, um destino. Drive = MORTO.
 
 ## Connections
 - feeds:: [[RM-ATOM-OS]]
@@ -117,3 +118,4 @@ Os 5 vértices vivos e interconectados. O Atom OS é o tecido conjuntivo. Genesi
 - feeds:: [[RM-ATLAS-FRAMES]]
 - feeds:: [[RM-MUDA]]
 - feeds:: [[RM-YUGAR]]
+- feeds:: [[RM-VIDA]]

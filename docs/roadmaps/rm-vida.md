@@ -12,12 +12,13 @@
 ║           #milestone                 ║
 ║ source:   claude-project             ║
 ║ created:  2026-03-31                 ║
-║ updated:  2026-03-31                 ║
+║ updated:  2026-04-01                 ║
 ╠══════════════════════════════════════╣
 ║ connections:                         ║
 ║   → belongs_to: RM-MASTER            ║
 ║   → references: RM-ATLAS-FRAMES      ║
 ║   → references: RM-YUGAR             ║
+║   → references: RM-ATOM-OS           ║
 ╚══════════════════════════════════════╝
 
 ## Roadmap — Vida (RM-VIDA)
@@ -106,3 +107,4 @@ Os 8 módulos alimentam-se mutuamente. O Octágono está vivo.
 - belongs_to:: [[RM-MASTER]]
 - references:: [[RM-ATLAS-FRAMES]]
 - references:: [[RM-YUGAR]]
+- references:: [[RM-ATOM-OS]]

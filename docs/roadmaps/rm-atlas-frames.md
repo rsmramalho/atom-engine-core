@@ -12,7 +12,7 @@
 ║           #project:atlas-frames      ║
 ║ source:   claude-project             ║
 ║ created:  2026-03-31                 ║
-║ updated:  2026-03-31                 ║
+║ updated:  2026-04-01                 ║
 ║ project:  Atlas Frames               ║
 ╠══════════════════════════════════════╣
 ║ connections:                         ║
