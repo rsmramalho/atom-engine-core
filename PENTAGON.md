@@ -66,7 +66,7 @@ Espiral 2 redesenhada v6.0 — "Vida/sistema operacional". Conceito: "se existe 
 - ⚪ F4 □ Biblioteca + grafo (Library, connections, graph, filtro por domínio) — protocol: full
 - ⚪ F5 ⬠ Companheiro (AI companion, voz, nudges, Raiz context) — protocol: full
 
-Seeds Espiral 3: Escudo (ações nos conectores), Resiliência (offline + Ollama), Propagação (estágio 6 real).
+Seeds Espiral 3: Escudo (ações nos conectores), Resiliência (offline + Ollama), Propagação (estágio 6 real), Atom Agent (braço físico — filesystem scanner, Python CLI, spec v1.0 em specs/).
 
 **Debt:** migration 007 reconciliou schema v1/v2. Hex hardcoded resolvido (dark mode funciona). useRealtime extraído pra realtime-service.
 **Deploy:** mindroot-v2.vercel.app / mindroot.com.au
@@ -177,7 +177,8 @@ V3 Atlas         |  | items    V5 Yugar
 |-----------|--------|-----------|
 | Yugar Vision Doc v0.1 | Visão completa da propriedade como organismo. 6 camadas, Corp Shield, AI resiliente, Library Feed, infra física, economia de troca, Build & Stay, replicabilidade. | atom-engine-core |
 | Genesis Build Protocol v1.0 | Protocolo de agentes para Claude Code. 5 agentes, inside-out. | atom-engine-core + mindroot-v2 (CLAUDE.md) |
-| Guardião Audit v1.0 | Ritual de verificação de alinhamento geométrico. | atom-engine-core |
+| Guardião Audit v2.0 | Agente de geometria documental — 7 camadas de verificação, de dentro pra fora. | atom-engine-core |
+| Atom Agent v1.0 | Braço físico do Atom HS — filesystem scanner, 6 spirais, Python CLI. Seed da Espiral 3. | atom-engine-core |
 | Roadmap PHI Meta-Template v2.0 | Template universal de roadmaps com campo protocol:. | atom-engine-core |
 
 ---
@@ -220,6 +221,7 @@ O PENTAGON.md é revisado:
 | 1.1 | 02 Abr 2026 | Yugar Vision Doc referenciado. Decomposição por vértice documentada. V1 duas espirais (Corpo + Mente). Material estratégico mapeado em cada vértice. Seção "documentos estratégicos" adicionada. |
 | 2.0 | 03 Abr 2026 | Espiral 1 COMPLETA. Espiral 2 definida (5 fases PHI). Build Protocol, Guardião Audit, Roadmap PHI v2.0 referenciados. Audit AMARELO→VERDE. Debt resolvida. |
 | 2.1 | 04 Abr 2026 | Repo reorganizado: law/, specs/, wraps/, archive/. Naming convention padronizada (Meta-Template). F1 Raiz done, F2 parcial. README com arvore real. |
+| 2.2 | 04 Abr 2026 | Guardião v2.0 (7 camadas documentais). Atom Agent v1.0 referenciado como seed da Espiral 3. Routine Builder registrado. |
 
 ---
 
