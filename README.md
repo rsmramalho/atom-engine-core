@@ -1,58 +1,100 @@
 # Atom Engine Core
 
-Universal data protocol for personal operating systems.
+The brain of Atom HS — specs, protocols, and the universal schema that defines how information matures.
 
-- **Version:** Genesis v5.0.1 + AtomItem Schema v2
-- **Status:** Private — validation in progress
-- **Principle:** The schema is the contract. All systems are consumers.
+**Version:** Genesis v5.0.1 + AtomItem Schema v2
+**Status:** Active — production validated
+**Principle:** The schema is the contract. Code is a consumer.
 
-## What's here
+## What is this
 
-| Folder | Purpose |
-|--------|---------|
-| `genesis/` | The universal data contract (lei — copy from Knowledge base) |
-| `marco-zero/` | Operational guide (copy from Knowledge base) |
-| `design/wireframes/` | 11 MindRoot wireframes (mid-fi HTML) |
-| `docs/roadmaps/` | 7 Pentágono roadmaps (master documents) |
-| `specs/` | Vision specs (auto-triage, future) |
-| `sql/` | Supabase migrations (Schema v2) |
-| `templates/archive/` | Historical templates (superseded by type-schemas.json) |
+Atom Engine Core is the specification layer for [Atom HS](https://github.com/rsmramalho/mindroot-v2) (Human Systems). It contains the law documents, design specs, and operational protocols that every implementation follows. No application code — only contracts.
 
-## The Pentágono
+## The Genesis Protocol
+
+Genesis defines how any piece of information — a task, a recipe, a reflection, a project — is captured, matures, connects, and completes. 7 stages, sacred geometry, one state machine:
 
 ```
-Genesis v5.0.1 (a lei)
-  └── Atom OS (Engine + MindRoot = protocolo + interface)
-        └── Pentágono (5 vértices)
-              ├── V1. Atom OS         — O Espelho     — serve o indivíduo
-              ├── V2. Constellation   — O Telescópio  — serve o negócio
-              ├── V3. Atlas Frames    — A Bigorna     — serve o presente
-              ├── V4. Muda            — A Árvore      — serve a comunidade
-              └── V5. Yugar/Atlas Lab — A Raiz        — serve o legado
+  ·  Ponto       — Capture       inbox
+  —  Linha       — Classified    type + module assigned
+  △  Triangulo   — Structured    template applied
+  □  Quadrado    — Validated     4 integrity gates
+  ⬠  Pentagono   — Connected     linked to other items
+  ⬡  Hexagono    — Activated     effects propagated
+  ○  Circulo     — Committed     finalized in daily wrap
 ```
 
-## Source of Truth
+**Properties:** advance sequentially (never skip), regress on lost requirements, mutate (morph) preserves history, entropy extracts seeds from completed items. The cycle is Fibonacci — each completion feeds new beginnings.
 
-| What | Where |
-|------|-------|
-| Law (schema, contract) | Knowledge base — Project Atom (Claude) |
-| Operational (roadmaps, specs, wireframes) | This repo (`atom-engine-core`) |
-| App code | `rsmramalho/mindroot` (branch `ui-v2`) |
-| Data | Supabase (items, connections, events) |
-| Google Drive | DEAD. Historical archive only. |
+## Documents
 
-## The 7 Stages
+### Law (3)
+| Document | What it defines |
+|----------|----------------|
+| **Genesis v5.0.1** | Universal contract. 23 types, 8 modules, 7 stages, state machine, SQL schema, RPCs, audit views. |
+| **Marco Zero v2.0** | Operational guide. How the system is used day-to-day. Soul layer, rituals, wrap protocol. |
+| **Meta-Template v1.1** | Template of templates. Exact structure every item template follows. |
 
-| # | Geometry | Name | State |
-|---|----------|------|-------|
-| 1 | · | Capture | `inbox` |
-| 2 | — | Intention | `classified` |
-| 3 | △ | Structure | `structured` |
-| 4 | □ | Foundation | `validated` |
-| 5 | ⬠ | Connection | `connected` |
-| 6 | ⬡ | Activation | `propagated` |
-| 7 | ○ | Completeness | `committed` |
+### Specs (3)
+| Document | What it defines |
+|----------|----------------|
+| **Genesis Build Protocol v1.0** | Agent orchestration for Claude Code. 5 agents (Guardian, Root, Structure, Interface, Web), inside-out construction. |
+| **Guardian Audit v1.0** | Geometric alignment verification ritual. Run before new phases, after law changes, or when something feels off. |
+| **Yugar Vision v0.1** | Long-term vision document. Property as living organism. |
+
+### Templates (1)
+| Document | What it defines |
+|----------|----------------|
+| **Roadmap PHI v2.0** | Universal roadmap format. Fibonacci spiral (1-1-2-3-5-8-13), protocol field per phase. |
+
+### Master
+| Document | What it defines |
+|----------|----------------|
+| **PENTAGON.md** | Cross-project master roadmap. 6 vertices (Atom HS at center), dependency map, audit trail. |
+
+## Schema
+
+**23 types:** note, reflection, recommendation, podcast, article, resource, list, task, habit, recipe, workout, spec, checkpoint, project, session-log, wrap, ritual, review, log, doc, research, template, lib
+
+**8 modules:** work, body, mind, family, purpose, bridge, finance, social
+
+**8 states:** inbox, classified, structured, validated, connected, propagated, committed, archived
+
+**Type floors:** each type has a minimum maturity stage (tasks need structure at stage 3, projects need connections at stage 5)
+
+## Build Protocol
+
+The Genesis Build Protocol defines how features are built using Claude Code:
+
+| Protocol | Agents | When |
+|----------|--------|------|
+| `inner` | Guardian | Architecture decisions, spec validation |
+| `foundation` | Guardian + Root | New tables, schema changes |
+| `logic` | Guardian + Root + Structure | Backend without UI |
+| `full` | All 5 agents | Complete features |
+| `surface` | Interface only | Visual changes, no data |
+
+Each agent only sees what was born before it. The geometry is preserved because decisions flow from the contract, not from assumptions.
+
+## The Pentagon
+
+```
+              V2 Constellation
+             /                \
+        V6 Lab            V3 Atlas
+            |                 |
+        V5 Yugar          V4 Muda
+             \                /
+              — V1 Atom HS —
+                 (center)
+```
+
+Atom HS is the center — it feeds all vertices. Everything else orbits around it.
+
+## Related
+
+- **[mindroot-v2](https://github.com/rsmramalho/mindroot-v2)** — The UI layer. React + TypeScript + Supabase. Where Genesis becomes touchable.
 
 ## License
 
-To be defined. Intended as open-source (FOSS) after internal validation.
+To be defined. Intended as open-source after internal validation.
