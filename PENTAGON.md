@@ -46,7 +46,7 @@ Atom HS é o centro — não compete com os vértices, alimenta todos eles. O Pe
 ### V1 — Atom HS · centro (active)
 
 **Roadmap:** ROADMAP.md no mindroot-v2 (v6.0)
-**Espiral atual:** 2 (Vida — sistema operacional) — planejada, não iniciada
+**Espiral atual:** 2 (Vida — sistema operacional) — em andamento (F1 done, F2 parcial)
 **Progresso Espiral 1:** COMPLETA ○ (7/7 fases, 30 commits, 76 files, ~7.8K LOC, 41 testes)
 **Princípio:** Motor → Inteligência → Visualização → Reflexão
 
@@ -60,8 +60,8 @@ Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
 - ✅ F7 ○ Completude (dark mode, search, export, calendar, offline lite, polish)
 
 Espiral 2 redesenhada v6.0 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
-- ⚪ F1 · Raiz (9 domínios como fundação permanente) — protocol: foundation
-- ⚪ F2 — Conectores (Gmail, Calendar, Drive → inbox) — protocol: full
+- ✅ F1 · Raiz (9 domínios como fundação permanente) — done (b64511b + a53be24)
+- ◐ F2 — Conectores (Gmail, Calendar, Drive → inbox) — parcial (OAuth+UI done, edge functions blocked)
 - ⚪ F3 △ Toque + alma + triage (UI + soul loop + AI classificação) — protocol: surface + logic
 - ⚪ F4 □ Biblioteca + grafo (Library, connections, graph, filtro por domínio) — protocol: full
 - ⚪ F5 ⬠ Companheiro (AI companion, voz, nudges, Raiz context) — protocol: full
@@ -71,7 +71,7 @@ Seeds Espiral 3: Escudo (ações nos conectores), Resiliência (offline + Ollama
 **Debt:** migration 007 reconciliou schema v1/v2. Hex hardcoded resolvido (dark mode funciona). useRealtime extraído pra realtime-service.
 **Deploy:** mindroot-v2.vercel.app / mindroot.com.au
 **Audit:** 03 Abr 2026 — AMARELO → VERDE (migration 007 + realtime-service fix + Build Protocol testado)
-**Cross-check:** 03 Abr 2026 — ROADMAP v6.0 commitado (mindroot-v2 5a5c9b0)
+**Cross-check:** 04 Abr 2026 — F1 Raiz done (b64511b), F2 Conectores parcial. Repo reorganizado (law/, specs/, wraps/, archive/). ROADMAP v6.1 sync pendente.
 **Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo). Testado com protocol:foundation na migration 007.
 
 ### V2 — Constellation OS (paused)
@@ -219,6 +219,7 @@ O PENTAGON.md é revisado:
 | 1.0 | 02 Abr 2026 | Documento inicial. Atom HS no centro (hub), 5 vértices orbitando. V6 Atlas/Yugar Lab adicionado. Dependências cruzadas. Regra de cross-check. |
 | 1.1 | 02 Abr 2026 | Yugar Vision Doc referenciado. Decomposição por vértice documentada. V1 duas espirais (Corpo + Mente). Material estratégico mapeado em cada vértice. Seção "documentos estratégicos" adicionada. |
 | 2.0 | 03 Abr 2026 | Espiral 1 COMPLETA. Espiral 2 definida (5 fases PHI). Build Protocol, Guardião Audit, Roadmap PHI v2.0 referenciados. Audit AMARELO→VERDE. Debt resolvida. |
+| 2.1 | 04 Abr 2026 | Repo reorganizado: law/, specs/, wraps/, archive/. Naming convention padronizada (Meta-Template). F1 Raiz done, F2 parcial. README com arvore real. |
 
 ---
 

@@ -3,14 +3,14 @@
   <br/><br/>
   <strong>Atom Engine Core</strong>
   <br/>
-  <sub>The brain of Atom HS — protocol, schema, rules, agent.</sub>
+  <sub>The brain of Atom HS — protocol, schema, specs, design.</sub>
 </p>
 
 ---
 
 ## What is this
 
-The engine that powers [Atom HS](https://github.com/rsmramalho) (Human Systems). This repo contains the Genesis protocol, the schema that governs every item in the system, the specs that define every feature, and the local agent that organizes the physical filesystem.
+The engine that powers [Atom HS](https://github.com/rsmramalho) (Human Systems). This repo contains the Genesis protocol, the schema that governs every item in the system, and the specs that define every feature.
 
 If [MindRoot](https://github.com/rsmramalho/mindroot-v2) is the face, this is the brain.
 
@@ -18,22 +18,22 @@ If [MindRoot](https://github.com/rsmramalho/mindroot-v2) is the face, this is th
 
 ```
 atom-engine-core/
-├── docs/                   Genesis protocol, Marco Zero, specs
-│   ├── genesis-v5.md       The universal contract (7 stages, schema v2)
-│   ├── marco-zero-v2.md    Operational guide
-│   ├── meta-template.md    The template of templates
-│   ├── atom-agent-v1.md    Local agent spec
-│   └── ...                 All operational specs
+├── PENTAGON.md                         Master roadmap (all 6 vertices)
+├── law/                                3 docs-lei (git-versioned copies)
+│   ├── system_spec_genesis_v5-0-1.md   The universal contract
+│   ├── system_spec_marco-zero_v2-0.md  Operational guide
+│   └── system_template_meta-template_v1-1.md
+├── specs/                              Active specs
+│   ├── system_spec_atom-agent_v1-0.md
+│   ├── system_spec_genesis-build-protocol_v1-0.md
+│   ├── system_spec_guardiao-audit_v1-0.md
+│   ├── system_spec_yugar-vision_v0-1.md
+│   └── system_template_roadmap-phi_v2-0.md
+├── wraps/                              Session wraps
 ├── design/
-│   └── wireframes/         11 complete wireframes (HTML)
-├── agent/                  Atom Agent — Python CLI
-│   ├── src/
-│   │   └── atom_agent/
-│   │       ├── core/       classifier, dedup, namer, mover
-│   │       ├── commands/   scan, watch, clean, protect, migrate, entropy
-│   │       └── scanners/   filesystem, gmail, photos, calendar, drive
-│   └── tests/
-└── PENTAGON.md             Master roadmap (all 5 vertices)
+│   └── wireframes/                     11 interactive wireframes (HTML)
+├── sql/                                Reference SQL
+└── archive/                            Superseded docs and templates
 ```
 
 ## Genesis — the protocol
@@ -52,21 +52,6 @@ Every item in Atom HS progresses through 7 stages of maturation:
 
 Items advance sequentially, regress automatically when integrity breaks, and decompose into seeds when inactive — the seeds become new points. Fibonacci: each completion feeds new genesis.
 
-## Atom Agent
-
-The physical arm of Atom HS. A Python CLI that organizes the real filesystem.
-
-```bash
-atom-agent scan ~/Downloads          # organize chaos
-atom-agent watch ~/Downloads         # monitor in background
-atom-agent clean --duplicates        # find and remove duplicates
-atom-agent protect --vitals          # verify backups of vital docs
-atom-agent migrate photos --from a@x.com --to b@y.com
-atom-agent entropy                   # lifecycle: trash, stale, seeds
-```
-
-Files are classified, deduplicated, renamed (Genesis naming convention), and physically moved to an organized filesystem (`AtomDrive/`). Every processed file becomes an indexed item in Supabase — visible in MindRoot.
-
 ## Schema
 
 23 types · 8 modules · 8 states · 8 relations · Supabase (PostgreSQL + JSONB)
@@ -83,7 +68,7 @@ The schema is the contract. If tomorrow you swap Supabase for raw Postgres, or M
 ## Status
 
 **Genesis v5.0.1** — definitive spec. **Schema v2** — deployed.
-**Atom Agent v1.0** — spec complete, build planned.
+**Espiral 1** — complete. **Espiral 2** — in progress (F1 done, F2 partial).
 
 ---
 
