@@ -1,100 +1,90 @@
-# Atom Engine Core
+<p align="center">
+  <code>·  —  △  □  ⬠  ⬡  ○</code>
+  <br/><br/>
+  <strong>Atom Engine Core</strong>
+  <br/>
+  <sub>The brain of Atom HS — protocol, schema, rules, agent.</sub>
+</p>
 
-The brain of Atom HS — specs, protocols, and the universal schema that defines how information matures.
-
-**Version:** Genesis v5.0.1 + AtomItem Schema v2
-**Status:** Active — production validated
-**Principle:** The schema is the contract. Code is a consumer.
+---
 
 ## What is this
 
-Atom Engine Core is the specification layer for [Atom HS](https://github.com/rsmramalho/mindroot-v2) (Human Systems). It contains the law documents, design specs, and operational protocols that every implementation follows. No application code — only contracts.
+The engine that powers [Atom HS](https://github.com/rsmramalho) (Human Systems). This repo contains the Genesis protocol, the schema that governs every item in the system, the specs that define every feature, and the local agent that organizes the physical filesystem.
 
-## The Genesis Protocol
+If [MindRoot](https://github.com/rsmramalho/mindroot-v2) is the face, this is the brain.
 
-Genesis defines how any piece of information — a task, a recipe, a reflection, a project — is captured, matures, connects, and completes. 7 stages, sacred geometry, one state machine:
+## Architecture
 
 ```
-  ·  Ponto       — Capture       inbox
-  —  Linha       — Classified    type + module assigned
-  △  Triangulo   — Structured    template applied
-  □  Quadrado    — Validated     4 integrity gates
-  ⬠  Pentagono   — Connected     linked to other items
-  ⬡  Hexagono    — Activated     effects propagated
-  ○  Circulo     — Committed     finalized in daily wrap
+atom-engine-core/
+├── docs/                   Genesis protocol, Marco Zero, specs
+│   ├── genesis-v5.md       The universal contract (7 stages, schema v2)
+│   ├── marco-zero-v2.md    Operational guide
+│   ├── meta-template.md    The template of templates
+│   ├── atom-agent-v1.md    Local agent spec
+│   └── ...                 All operational specs
+├── design/
+│   └── wireframes/         11 complete wireframes (HTML)
+├── agent/                  Atom Agent — Python CLI
+│   ├── src/
+│   │   └── atom_agent/
+│   │       ├── core/       classifier, dedup, namer, mover
+│   │       ├── commands/   scan, watch, clean, protect, migrate, entropy
+│   │       └── scanners/   filesystem, gmail, photos, calendar, drive
+│   └── tests/
+└── PENTAGON.md             Master roadmap (all 5 vertices)
 ```
 
-**Properties:** advance sequentially (never skip), regress on lost requirements, mutate (morph) preserves history, entropy extracts seeds from completed items. The cycle is Fibonacci — each completion feeds new beginnings.
+## Genesis — the protocol
 
-## Documents
+Every item in Atom HS progresses through 7 stages of maturation:
 
-### Law (3)
-| Document | What it defines |
-|----------|----------------|
-| **Genesis v5.0.1** | Universal contract. 23 types, 8 modules, 7 stages, state machine, SQL schema, RPCs, audit views. |
-| **Marco Zero v2.0** | Operational guide. How the system is used day-to-day. Soul layer, rituals, wrap protocol. |
-| **Meta-Template v1.1** | Template of templates. Exact structure every item template follows. |
+| Stage | Geometry | State | What happens |
+|-------|----------|-------|-------------|
+| 1 | `·` Point | inbox | Raw capture enters the system |
+| 2 | `—` Line | classified | Type + module assigned |
+| 3 | `△` Triangle | structured | Template applied, UUID generated |
+| 4 | `□` Square | validated | 4 integrity gates passed |
+| 5 | `⬠` Pentagon | connected | Connections to other items |
+| 6 | `⬡` Hexagon | propagated | Effects cascade to connected items |
+| 7 | `○` Circle | committed | Committed via wrap. Complete. |
 
-### Specs (3)
-| Document | What it defines |
-|----------|----------------|
-| **Genesis Build Protocol v1.0** | Agent orchestration for Claude Code. 5 agents (Guardian, Root, Structure, Interface, Web), inside-out construction. |
-| **Guardian Audit v1.0** | Geometric alignment verification ritual. Run before new phases, after law changes, or when something feels off. |
-| **Yugar Vision v0.1** | Long-term vision document. Property as living organism. |
+Items advance sequentially, regress automatically when integrity breaks, and decompose into seeds when inactive — the seeds become new points. Fibonacci: each completion feeds new genesis.
 
-### Templates (1)
-| Document | What it defines |
-|----------|----------------|
-| **Roadmap PHI v2.0** | Universal roadmap format. Fibonacci spiral (1-1-2-3-5-8-13), protocol field per phase. |
+## Atom Agent
 
-### Master
-| Document | What it defines |
-|----------|----------------|
-| **PENTAGON.md** | Cross-project master roadmap. 6 vertices (Atom HS at center), dependency map, audit trail. |
+The physical arm of Atom HS. A Python CLI that organizes the real filesystem.
+
+```bash
+atom-agent scan ~/Downloads          # organize chaos
+atom-agent watch ~/Downloads         # monitor in background
+atom-agent clean --duplicates        # find and remove duplicates
+atom-agent protect --vitals          # verify backups of vital docs
+atom-agent migrate photos --from a@x.com --to b@y.com
+atom-agent entropy                   # lifecycle: trash, stale, seeds
+```
+
+Files are classified, deduplicated, renamed (Genesis naming convention), and physically moved to an organized filesystem (`AtomDrive/`). Every processed file becomes an indexed item in Supabase — visible in MindRoot.
 
 ## Schema
 
-**23 types:** note, reflection, recommendation, podcast, article, resource, list, task, habit, recipe, workout, spec, checkpoint, project, session-log, wrap, ritual, review, log, doc, research, template, lib
+23 types · 8 modules · 8 states · 8 relations · Supabase (PostgreSQL + JSONB)
 
-**8 modules:** work, body, mind, family, purpose, bridge, finance, social
-
-**8 states:** inbox, classified, structured, validated, connected, propagated, committed, archived
-
-**Type floors:** each type has a minimum maturity stage (tasks need structure at stage 3, projects need connections at stage 5)
-
-## Build Protocol
-
-The Genesis Build Protocol defines how features are built using Claude Code:
-
-| Protocol | Agents | When |
-|----------|--------|------|
-| `inner` | Guardian | Architecture decisions, spec validation |
-| `foundation` | Guardian + Root | New tables, schema changes |
-| `logic` | Guardian + Root + Structure | Backend without UI |
-| `full` | All 5 agents | Complete features |
-| `surface` | Interface only | Visual changes, no data |
-
-Each agent only sees what was born before it. The geometry is preserved because decisions flow from the contract, not from assumptions.
-
-## The Pentagon
-
-```
-              V2 Constellation
-             /                \
-        V6 Lab            V3 Atlas
-            |                 |
-        V5 Yugar          V4 Muda
-             \                /
-              — V1 Atom HS —
-                 (center)
-```
-
-Atom HS is the center — it feeds all vertices. Everything else orbits around it.
+The schema is the contract. If tomorrow you swap Supabase for raw Postgres, or MindRoot for a CLI — the schema is the same.
 
 ## Related
 
-- **[mindroot-v2](https://github.com/rsmramalho/mindroot-v2)** — The UI layer. React + TypeScript + Supabase. Where Genesis becomes touchable.
+| Repo | Role |
+|------|------|
+| [`mindroot-v2`](https://github.com/rsmramalho/mindroot-v2) | Web/mobile interface (React, TypeScript, Tailwind) |
+| Supabase | Data layer (items, connections, events) |
 
-## License
+## Status
 
-To be defined. Intended as open-source after internal validation.
+**Genesis v5.0.1** — definitive spec. **Schema v2** — deployed.
+**Atom Agent v1.0** — spec complete, build planned.
+
+---
+
+<sub>Private repository. Part of the <a href="https://github.com/rsmramalho">Atom HS</a> ecosystem.</sub>
