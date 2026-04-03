@@ -1,7 +1,7 @@
 # Atom Genesis v4 + AtomItem Schema v2
 ## O Contrato Universal do Atom Engine
 
-**Versão:** 5.0.1
+**Versão:** 5.0.2
 **Data:** 01 Abr 2026
 **Status:** Definitive Spec — Marco Zero
 **Evolução:** Genesis v1→v2→v3→v4→v5 | Schema v1→v2
@@ -78,6 +78,9 @@ Os 3 documentos-lei, 7 estágios, 8 módulos ressoam com a sequência natural. O
 | task, habit | 3 (Triângulo) | Precisa de template pra existir no backlog |
 | recipe, workout | 3 (Triângulo) | Template completo. Connections são bônus |
 | checkpoint | 3 (Triângulo) | Documento estruturado |
+| ritual | 3 (Triângulo) | Body schema (intention, anchors, time_window). Precisa de estrutura |
+| review | 3 (Triângulo) | Body schema (subject, rating, highlights). Precisa de estrutura |
+| template | 3 (Triângulo) | Define a geometria de um type. Precisa de estrutura |
 | spec | 5 (Pentágono) | Spec sem connections não especifica nada |
 | project | 5 (Pentágono) | Sem connections = ideia, não projeto |
 | session-log, wrap | 7 (Círculo) | Nasce completo por definição |
@@ -356,8 +359,18 @@ type AtomSource =
 
 ### 4.4 Type Registry (body_schema por type)
 
-| Type | Body schema | Module default |
-|------|-------------|----------------|
+#### Referência canônica
+
+A referência autoritativa dos body schemas por type é `type-schemas.json` no repo MindRoot (`src/config/type-schemas.json`). Este arquivo é carregado no build e contém floor_stage, default_module, has_body_schema, body_schema, extensions, naming, e usage_notes para cada um dos 23 types.
+
+O helper tipado `src/config/types.ts` exporta: `getTypeSchema()`, `getFloorStage()`, `getDefaultModule()`, `hasBodySchema()`, `getExtensions()`.
+
+#### Design original (v5.0.1) vs implementação viva
+
+A tabela abaixo documenta o design original dos body schemas. A implementação no `type-schemas.json` evoluiu com o primeiro uso real de cada type — seguindo o princípio "Templates nascem do uso: o primeiro item de um type cria o template ao vivo." Quando há divergência, `type-schemas.json` é a referência operacional.
+
+| Type | Body schema (design original v5.0.1) | Module default |
+|------|---------------------------------------|----------------|
 | recipe | `{ cuisine, serves, prep_time, cook_time, difficulty, ingredients[], steps[] }` | body |
 | workout | `{ focus, frequency, level, duration, equipment[], exercises[] }` | body |
 | ritual | `{ intention, anchors[], time_window, duration }` | purpose |
@@ -370,6 +383,8 @@ type AtomSource =
 | article | `{ author, publication, topic, key_points[], source_url }` | mind |
 
 Types sem body (usam notes + tags): project, task, habit, note, reflection, resource, list, log, doc, research, template, lib, wrap
+
+**Migração pra tabela SQL (futuro):** `type-schemas.json` migra pra tabela SQL (`type_schemas`) se/quando precisar de types dinâmicos. Esse futuro não é agora.
 
 ---
 
@@ -1144,6 +1159,7 @@ O Genesis define O QUE (schema, state machine, motores, serialização). O Marco
 | Genesis 4.2.1 + Schema 2.0 | 31 Mar 2026 | Arquitetura Cósmica nomeada (Part 1.4) — revela PHI e geometria sagrada já presentes no design. Regra inbox obrigatório. Zero mudanças estruturais. |
 | Genesis 5.0 + Schema 2.0 | 01 Abr 2026 | Revisão arquitetural: Supabase é source of truth (ponte eliminada). Drive→export sob demanda. Obsidian→export sob demanda. MindRoot→porta da frente. Wrap→body JSONB estruturado. Templates→type_schemas centralizados. Naming→display/export format. Raiz integrado (seção 4): 9 domínios × 7 estágios, onboarding + feature permanente. Parts 1-7, 10-12 intactas. |
 | Genesis 5.0.1 + Schema 2.0 | 01 Abr 2026 | 5 decisões fechadas: §8.6 type_schemas=JSON config no repo (não SQL), §8.3 export Drive=manual só (não automático), Obsidian=export sob demanda (mantém), migração=recriar no MindRoot, timeline=implementar enquanto documenta. type-schemas.json criado com 23 types. |
+| Genesis 5.0.2 + Schema 2.0 | 04 Abr 2026 | Pisos: ritual (3), review (3), template (3) adicionados à tabela Part 2. §4.4 Type Registry: type-schemas.json declarado como referência canônica dos body schemas. Tabela original preservada como design intent v5.0.1. Zero mudanças estruturais. |
 
 ---
 
