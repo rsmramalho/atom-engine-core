@@ -1,7 +1,7 @@
 # Pentágono — Master Roadmap
 
-**Versão:** 1.1
-**Data:** 02 Abr 2026
+**Versão:** 2.0
+**Data:** 03 Abr 2026
 **Status:** active
 **Princípio:** Cinco vértices, um centro. Atom HS alimenta todos. O Lab experimenta pra todos.
 
@@ -45,25 +45,33 @@ Atom HS é o centro — não compete com os vértices, alimenta todos eles. O Pe
 
 ### V1 — Atom HS · centro (active)
 
-**Roadmap:** ROADMAP.md no mindroot-v2
-**Espiral atual:** 1 (Corpo — app)
-**Fase atual:** F6 ✅ done → F7 (Completude) próximo
-**Progresso:** 6/7 fases PHI (85%)
+**Roadmap:** ROADMAP.md no mindroot-v2 (v5.0)
+**Espiral atual:** 2 (Mente — organismo) — planejada, não iniciada
+**Progresso Espiral 1:** COMPLETA ○ (7/7 fases, 30 commits, 76 files, ~7.8K LOC, 41 testes)
 **Princípio:** Motor → Inteligência → Visualização → Reflexão
 
-Fases (Espiral 1 — Corpo):
-- ✅ F1 · Sementes (config, types)
-- ✅ F2 — Raízes (services, Supabase)
-- ✅ F3 △ Geometria (atoms, tokens, shell)
-- ✅ F4 □ Fundação (pages, auth, onboarding)
-- ✅ F5 ⬠ Conexão (pipeline, wrap, triage UI)
-- ✅ F6 ⬡ Inteligência (AI triage, audit, testes)
-- ⚪ F7 ○ Completude (export, dark mode, polish)
+Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
+- ✅ F1 · Sementes (config, types, type-schemas.json)
+- ✅ F2 — Raízes (services, Supabase real, auth)
+- ✅ F3 △ Geometria (atoms, tokens, shell, router)
+- ✅ F4 □ Fundação (pages, auth, onboarding, triage UI)
+- ✅ F5 ⬠ Conexão (pipeline, wrap, search, projects)
+- ✅ F6 ⬡ Inteligência (AI triage, audit, analytics, testes)
+- ✅ F7 ○ Completude (dark mode, search, export, calendar, offline lite, polish)
 
-**Espiral 2 (Mente — organismo):** planejada, não iniciada. Nasce quando Espiral 1 fechar. Escopo: IA local, email ingestion, Library Feed, captura por voz, Corp Shield. Origem: decomposição do Yugar Vision Doc.
+Espiral 2 — Mente / organismo (5 fases PHI):
+- ⚪ F1 · Toque + alma (usabilidade diária + soul loop real) — protocol: surface
+- ⚪ F2 — Raiz (9 domínios, onboarding unificado) — protocol: full
+- ⚪ F3 △ Triage real (Claude Haiku edge function) — protocol: logic
+- ⚪ F4 □ Biblioteca + grafo (Library, connections, graph) — protocol: full
+- ⚪ F5 ⬠ Companheiro (AI companion, voz, nudges) — protocol: full
 
-**Debt:** 136 hex hardcoded (dark mode blocker)
-**Deploy:** mindroot-v2.vercel.app
+Seeds Espiral 3: Escudo (Corp Shield + email), Resiliência (offline + Ollama), Propagação (estágio 6 real).
+
+**Debt:** migration 007 reconciliou schema v1/v2. Hex hardcoded resolvido (dark mode funciona). useRealtime extraído pra realtime-service.
+**Deploy:** mindroot-v2.vercel.app / mindroot.com.au
+**Audit:** 03 Abr 2026 — AMARELO → VERDE (migration 007 + realtime-service fix + Build Protocol testado)
+**Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo). Testado com protocol:foundation na migration 007.
 
 ### V2 — Constellation OS (paused)
 
@@ -167,6 +175,9 @@ V3 Atlas         |  | items    V5 Yugar
 | Documento | Escopo | Onde vive |
 |-----------|--------|-----------|
 | Yugar Vision Doc v0.1 | Visão completa da propriedade como organismo. 6 camadas, Corp Shield, AI resiliente, Library Feed, infra física, economia de troca, Build & Stay, replicabilidade. | atom-engine-core |
+| Genesis Build Protocol v1.0 | Protocolo de agentes para Claude Code. 5 agentes, inside-out. | atom-engine-core + mindroot-v2 (CLAUDE.md) |
+| Guardião Audit v1.0 | Ritual de verificação de alinhamento geométrico. | atom-engine-core |
+| Roadmap PHI Meta-Template v2.0 | Template universal de roadmaps com campo protocol:. | atom-engine-core |
 
 ---
 
@@ -206,6 +217,7 @@ O PENTAGON.md é revisado:
 |--------|------|---------|
 | 1.0 | 02 Abr 2026 | Documento inicial. Atom HS no centro (hub), 5 vértices orbitando. V6 Atlas/Yugar Lab adicionado. Dependências cruzadas. Regra de cross-check. |
 | 1.1 | 02 Abr 2026 | Yugar Vision Doc referenciado. Decomposição por vértice documentada. V1 duas espirais (Corpo + Mente). Material estratégico mapeado em cada vértice. Seção "documentos estratégicos" adicionada. |
+| 2.0 | 03 Abr 2026 | Espiral 1 COMPLETA. Espiral 2 definida (5 fases PHI). Build Protocol, Guardião Audit, Roadmap PHI v2.0 referenciados. Audit AMARELO→VERDE. Debt resolvida. |
 
 ---
 
