@@ -45,8 +45,8 @@ Atom HS é o centro — não compete com os vértices, alimenta todos eles. O Pe
 
 ### V1 — Atom HS · centro (active)
 
-**Roadmap:** ROADMAP.md no mindroot-v2 (v5.0)
-**Espiral atual:** 2 (Mente — organismo) — planejada, não iniciada
+**Roadmap:** ROADMAP.md no mindroot-v2 (v6.0)
+**Espiral atual:** 2 (Vida — sistema operacional) — planejada, não iniciada
 **Progresso Espiral 1:** COMPLETA ○ (7/7 fases, 30 commits, 76 files, ~7.8K LOC, 41 testes)
 **Princípio:** Motor → Inteligência → Visualização → Reflexão
 
@@ -59,18 +59,19 @@ Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
 - ✅ F6 ⬡ Inteligência (AI triage, audit, analytics, testes)
 - ✅ F7 ○ Completude (dark mode, search, export, calendar, offline lite, polish)
 
-Espiral 2 — Mente / organismo (5 fases PHI):
-- ⚪ F1 · Toque + alma (usabilidade diária + soul loop real) — protocol: surface
-- ⚪ F2 — Raiz (9 domínios, onboarding unificado) — protocol: full
-- ⚪ F3 △ Triage real (Claude Haiku edge function) — protocol: logic
-- ⚪ F4 □ Biblioteca + grafo (Library, connections, graph) — protocol: full
-- ⚪ F5 ⬠ Companheiro (AI companion, voz, nudges) — protocol: full
+Espiral 2 redesenhada v6.0 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
+- ⚪ F1 · Raiz (9 domínios como fundação permanente) — protocol: foundation
+- ⚪ F2 — Conectores (Gmail, Calendar, Drive → inbox) — protocol: full
+- ⚪ F3 △ Toque + alma + triage (UI + soul loop + AI classificação) — protocol: surface + logic
+- ⚪ F4 □ Biblioteca + grafo (Library, connections, graph, filtro por domínio) — protocol: full
+- ⚪ F5 ⬠ Companheiro (AI companion, voz, nudges, Raiz context) — protocol: full
 
-Seeds Espiral 3: Escudo (Corp Shield + email), Resiliência (offline + Ollama), Propagação (estágio 6 real).
+Seeds Espiral 3: Escudo (ações nos conectores), Resiliência (offline + Ollama), Propagação (estágio 6 real).
 
 **Debt:** migration 007 reconciliou schema v1/v2. Hex hardcoded resolvido (dark mode funciona). useRealtime extraído pra realtime-service.
 **Deploy:** mindroot-v2.vercel.app / mindroot.com.au
 **Audit:** 03 Abr 2026 — AMARELO → VERDE (migration 007 + realtime-service fix + Build Protocol testado)
+**Cross-check:** 03 Abr 2026 — ROADMAP v6.0 commitado (mindroot-v2 5a5c9b0)
 **Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo). Testado com protocol:foundation na migration 007.
 
 ### V2 — Constellation OS (paused)
