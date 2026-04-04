@@ -1,7 +1,7 @@
 # Pentágono — Master Roadmap
 
-**Versão:** 3.0
-**Data:** 04 Abr 2026
+**Versão:** 3.1
+**Data:** 05 Abr 2026
 **Status:** active
 **Princípio:** Cinco vértices, um centro. Atom Engine alimenta todos. O Lab experimenta pra todos.
 
@@ -55,9 +55,11 @@ O estagio 6 (⬡) do Genesis e opcional. O Pentagono (⬠, estagio 5) nao precis
 
 ### V1 — MindRoot · O Espelho (active)
 
-**Roadmap:** ROADMAP.md no mindroot-v2 (v6.0)
-**Espiral atual:** 2 (Vida — sistema operacional) — em andamento (F1 done, F2 parcial)
-**Progresso Espiral 1:** COMPLETA ○ (7/7 fases, 30 commits, 76 files, ~7.8K LOC, 41 testes)
+**Roadmap:** ROADMAP.md no mindroot-v2 (v6.7)
+**Espiral atual:** 2 (Vida — sistema operacional) — em andamento (F1 done, F2-F4 parciais)
+**Progresso Espiral 1:** COMPLETA ○ (7/7 fases)
+**Progresso Espiral 2:** 38/52 entregaveis (F1 12/12, F2 5/19, F3 15/19, F4 7/9)
+**Metricas:** 80 commits, 109 files, ~12.2K LOC, 14 pages, 6 edge functions
 **Princípio:** Motor → Inteligência → Visualização → Reflexão
 
 Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
@@ -69,19 +71,19 @@ Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
 - ✅ F6 ⬡ Inteligência (AI triage, audit, analytics, testes)
 - ✅ F7 ○ Completude (dark mode, search, export, calendar, offline lite, polish)
 
-Espiral 2 redesenhada v6.0 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
-- ✅ F1 · Raiz (9 domínios como fundação permanente) — done (b64511b + a53be24)
-- ◐ F2 — Conectores (Gmail, Calendar, Drive → inbox) — parcial (OAuth+UI done, edge functions blocked)
-- ⚪ F3 △ Toque + alma + triage (UI + soul loop + AI classificação) — protocol: surface + logic
-- ⚪ F4 □ Biblioteca + grafo (Library, connections, graph, filtro por domínio) — protocol: full
-- ⚪ F5 ⬠ Companheiro (AI companion, voz, nudges, Raiz context) — protocol: full
+Espiral 2 v6.7 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
+- ✅ F1 · Raiz (9 dominios, routine builder) — done
+- ◐ F2 — Conectores (API + Agent Local) — parcial (edge fns bulletproof, Atom Agent v0.1 criado, deploy pendente)
+- ◐ F3 △ Toque + alma (15/19 — toque 8/8, alma 3/6, triage 4/5)
+- ◐ F4 □ Biblioteca + grafo (7/9 — library, graph D3, connections CRUD done)
+- ⚪ F5 ⬠ Companheiro — futuro
 
-Seeds Espiral 3: Escudo (ações nos conectores), Resiliência (offline + Ollama), Propagação (estágio 6 real), Atom Agent (braço físico — filesystem scanner, Python CLI, spec v1.0 em specs/).
+Seeds Espiral 3: Escudo (acoes nos conectores), Resiliencia (offline + Ollama), Propagacao (estagio 6 real), Atom Agent v2+ (evolucao do v0.1 de F2: watch mode, Haiku, Drive scan).
 
-**Debt:** migration 007 reconciliou schema v1/v2. Hex hardcoded resolvido (dark mode funciona). useRealtime extraído pra realtime-service.
+**Debt:** Wrap soul: aurora data nao flui pro wrap body (shift=null). Chips clicaveis no ItemDetail. Graph domain filter (so tem module). Connection prompt stage 4.
 **Deploy:** mindroot-v2.vercel.app / mindroot.com.au
-**Audit:** 03 Abr 2026 — AMARELO → VERDE (migration 007 + realtime-service fix + Build Protocol testado)
-**Cross-check:** 04 Abr 2026 — F1 Raiz done (b64511b), F2 Conectores parcial. Repo reorganizado (law/, specs/, wraps/, archive/). ROADMAP v6.1 sync pendente.
+**Audit:** 05 Abr 2026 — VERDE. Debt antiga resolvida (dark mode, realtime).
+**Cross-check:** 05 Abr 2026 — ROADMAP v6.7 synced. F2 edge functions delivered (e26891a). Atom Agent repo criado (rsmramalho/atom-agent, 2 commits). Deploy Supabase pendente (migration 009 + edge functions).
 **Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo). Testado com protocol:foundation na migration 007.
 
 ### V2 — Constellation OS (paused)
@@ -178,7 +180,8 @@ V3 Lab ←——— V1 MindRoot ———→ V5 Muda
 | Yugar Vision Doc v0.1 | Visão completa da propriedade como organismo. 6 camadas, Corp Shield, AI resiliente, Library Feed, infra física, economia de troca, Build & Stay, replicabilidade. | atom-engine-core |
 | Genesis Build Protocol v1.0 | Protocolo de agentes para Claude Code. 5 agentes, inside-out. | atom-engine-core + mindroot-v2 (CLAUDE.md) |
 | Guardião Audit v2.0 | Agente de geometria documental — 7 camadas de verificação, de dentro pra fora. | atom-engine-core |
-| Atom Agent v1.0 | Braço físico do Atom HS — filesystem scanner, 6 spirais, Python CLI. Seed da Espiral 3. | atom-engine-core |
+| Atom Agent v1.0 (spec) | Braco fisico do Atom HS — filesystem scanner, 6 spirais, Python CLI. Implementado em F2. | atom-engine-core |
+| Atom Agent v0.1 (codigo) | CLI funcional: scan, classify, rename, move, index. Repo: rsmramalho/atom-agent. | atom-agent repo |
 | Roadmap PHI Meta-Template v2.0 | Template universal de roadmaps com campo protocol:. | atom-engine-core |
 | Atom Identity v1.0 | Nomenclatura definitiva — Atom como universo, Engine como centro, Pentagono 5V, Atlas hexagono. | atom-engine-core (law/) |
 
@@ -224,6 +227,7 @@ O PENTAGON.md é revisado:
 | 2.1 | 04 Abr 2026 | Repo reorganizado: law/, specs/, wraps/, archive/. Naming convention padronizada (Meta-Template). F1 Raiz done, F2 parcial. README com arvore real. |
 | 2.2 | 04 Abr 2026 | Guardião v2.0 (7 camadas documentais). Atom Agent v1.0 referenciado como seed da Espiral 3. Routine Builder registrado. |
 | 3.0 | 04 Abr 2026 | Naming: Atom OS→Atom. Genesis sem prefixo. Pentagono: V3=Lab, V4=Yugar, V5=Muda. Atlas → hexagono (propagacao externa, fora do Pentagono). Identity spec v1.0 adicionado. |
+| 3.1 | 05 Abr 2026 | Cross-repo sync: V1 Espiral 2 status real (F2-F4 parciais, 38/52 entregaveis). Atom Agent movido de Seed pra F2 (v0.1 implementado, repo criado). Metricas V1 atualizadas (80 commits, 12.2K LOC). Debt atualizada. |
 
 ---
 
