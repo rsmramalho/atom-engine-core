@@ -1,15 +1,15 @@
 # Pentágono — Master Roadmap
 
-**Versão:** 2.0
-**Data:** 03 Abr 2026
+**Versão:** 3.0
+**Data:** 04 Abr 2026
 **Status:** active
-**Princípio:** Cinco vértices, um centro. Atom HS alimenta todos. O Lab experimenta pra todos.
+**Princípio:** Cinco vértices, um centro. Atom Engine alimenta todos. O Lab experimenta pra todos.
 
 ---
 
 ## O que é isto
 
-O Pentágono é o ecossistema completo do Rick. Um hub central (Atom HS) e cinco projetos que orbitam ao redor, alimentados pelo centro e conectados entre si. Este documento é o master — a visão cross-project que garante que nenhum roadmap individual perca coerência com o todo.
+O Pentágono é o ecossistema completo do Rick. Atom Engine no centro e cinco projetos que orbitam ao redor, alimentados pelo centro e conectados entre si. Este documento é o master — a visão cross-project que garante que nenhum roadmap individual perca coerência com o todo.
 
 **Regra:** toda vez que um roadmap de projeto muda, este documento é atualizado. Se o PENTAGON.md não reflete a realidade, a geometria quebrou.
 
@@ -18,32 +18,42 @@ O Pentágono é o ecossistema completo do Rick. Um hub central (Atom HS) e cinco
 ## A geometria
 
 ```
-              V2 · Constellation
-             /                  \
-        V6 · Lab            V3 · Atlas
-            |                   |
-        V5 · Yugar          V4 · Muda
-             \                  /
-              ——— V1 · Atom HS ———
-                   (centro)
+              V1 · MindRoot
+              (O Espelho)
+             /           \
+      V5 · Muda          V2 · Constellation
+    (A Arvore)           (O Telescopio)
+          |  ATOM ENGINE  |
+          |   (centro)    |
+    V4 · Yugar           V3 · Lab
+    (A Raiz)          (O Laboratorio)
 ```
 
-Atom HS é o centro — não compete com os vértices, alimenta todos eles. O Pentágono são os 5 pontos que orbitam ao redor.
+Atom Engine e o centro — nao compete com os vertices, alimenta todos eles. O Pentagono sao os 5 pontos que orbitam ao redor.
 
-| Vértice | Projeto | Status | O que é | Onde vive |
-|---------|---------|--------|---------|-----------|
-| **V1** (centro) | **Atom HS** | **active** | **Hub. Sistema humano pessoal. Engine + MindRoot.** | mindroot-v2 repo |
-| V2 | Constellation OS | paused | Infraestrutura operacional | constellation repo |
-| V3 | Atlas Frames | active | Negócio físico. Estruturas de aço, Brendale QLD. | Monday.com |
-| V4 | Muda | concept | Comunidade | — |
-| V5 | Yugar Commons | concept | Mt Samson. Visão de longo prazo. | — |
-| V6 | Atlas/Yugar Lab | concept | Playground. Experimentação, novos produtos, serviços. | — |
+| Posicao | Projeto | Apelido | Status | Onde vive |
+|---------|---------|---------|--------|-----------|
+| **Centro** | **Atom Engine** | — | **active** | atom-engine-core repo |
+| **V1** | **MindRoot** | O Espelho | **active** | mindroot-v2 repo |
+| V2 | Constellation | O Telescopio | paused | constellation repo |
+| V3 | Lab | O Laboratorio | concept | — |
+| V4 | Yugar Commons | A Raiz | concept | — |
+| V5 | Muda | A Arvore | concept | — |
+| ⬡ | Atlas Frames | A Bigorna (hexagono) | active | Monday.com |
+
+### Atlas Frames — Hexagono ⬡
+
+Atlas nao e vertice do Pentagono. E o primeiro hexagono — a primeira propagacao externa. Atlas ja existia antes do Atom Engine. Mas quando o Pentagono se conecta com Atlas, a conexao interna gera efeito cascata no mundo externo.
+
+Na geometria sagrada, o hexagono e a unica forma regular que tessela infinitamente sem lacunas. Cada novo projeto externo que usar o Engine e um novo hexagono que encaixa perfeitamente.
+
+O estagio 6 (⬡) do Genesis e opcional. O Pentagono (⬠, estagio 5) nao precisa de propagacao pra existir completo. Mas quando a conexao gera efeito cascata — ela acontece pelo hexagono.
 
 ---
 
 ## Estado de cada vértice
 
-### V1 — Atom HS · centro (active)
+### V1 — MindRoot · O Espelho (active)
 
 **Roadmap:** ROADMAP.md no mindroot-v2 (v6.0)
 **Espiral atual:** 2 (Vida — sistema operacional) — em andamento (F1 done, F2 parcial)
@@ -78,67 +88,57 @@ Seeds Espiral 3: Escudo (ações nos conectores), Resiliência (offline + Ollama
 
 **Roadmap:** não criado (formato PHI pendente)
 **Fase atual:** landing page entregue, operação pausada
-**Depende de:** V1 Atom HS (patterns, infra, experiência)
+**Depende de:** V1 MindRoot (patterns, infra, experiencia)
 
-Quando ativar: após V1 Espiral 1 F7. O Constellation herda patterns do Atom HS — auth, pipeline, UI components, service layer. Sem V1 maduro, V2 repete trabalho.
+Quando ativar: apos V1 Espiral 1 F7. O Constellation herda patterns do MindRoot — auth, pipeline, UI components, service layer. Sem V1 maduro, V2 repete trabalho.
 
 Material estratégico: seções 12.2-12.3 do Yugar Vision Doc (template de replicação, playbook, pricing).
 
 Próximo passo: criar ROADMAP.md no formato PHI quando V1 estabilizar.
 
-### V3 — Atlas Frames (active)
+### V3 — Lab · O Laboratorio (concept)
 
-**Roadmap:** operação no Monday.com (não usa formato PHI — negócio físico)
-**Fase atual:** operação corrente
-**Independente operacionalmente** — mas alimenta e é alimentado pelo Lab (V6)
-
-Atlas é o negócio real. Opera independente com Monday.com + email (rick@atlasframes.com.au). Não precisa de roadmap PHI porque não é software — é estrutura de aço. Aparece no Pentágono porque é parte da vida do Rick e interage com mod-work no Atom HS.
-
-**Integração com V1:** tasks e projetos do Atlas vivem no Atom HS como items (type: task/project, module: work, tags: #project:atlas).
-
-### V4 — Muda (concept)
-
-**Roadmap:** não criado
+**Roadmap:** nao criado
 **Fase atual:** conceito
-**Depende de:** V1 Atom HS (maduro), V5 Yugar (terreno)
+**Depende de:** V1 MindRoot (sistema), Atlas (negocio), V4 Yugar (terreno)
 
-Muda é comunidade — nasce quando o Atom HS provar que Human Systems funciona pra uma pessoa, antes de funcionar pra muitas. Não tem prazo, não tem pressão. Cresce como planta.
+O Lab e o playground — onde novas ideias, produtos e servicos sao experimentados antes de virar realidade em qualquer outro vertice. O ponto onde o negocio fisico (Atlas) encontra o terreno (Yugar). Experimenta, valida, distribui.
 
-Material estratégico: seções 10-11 do Yugar Vision Doc (economia de troca, Build & Stay).
+Material estrategico: secao 4.4 do Yugar Vision Doc (hardware AI local), secao 13 Fase 6 (primeira cabana como prototipo).
 
-Próximo passo: primeiro spec quando V1 estiver no dia a dia.
+Proximo passo: primeira ideia concreta documentada no V1 (type: note/project, module: work, tags: #project:lab).
 
-### V5 — Yugar Commons (concept)
+### V4 — Yugar Commons · A Raiz (concept)
 
-**Roadmap:** não criado
-**Fase atual:** conceito / visão
-**Depende de:** V1 Atom HS (dados), V4 Muda (comunidade)
+**Roadmap:** nao criado
+**Fase atual:** conceito / visao
+**Depende de:** V1 MindRoot (dados), V5 Muda (comunidade)
 **Vision doc:** system_spec_yugar-vision_v0-1.md (atom-engine-core)
 
-Yugar é Mt Samson (20.66ha) como projeto de vida. Propriedade como organismo vivo: rede física, touchscreens por building, sensores IoT, Life Layer, Commons. Visão de 10+ anos.
+Yugar e Mt Samson (20.66ha) como projeto de vida. Propriedade como organismo vivo: rede fisica, touchscreens por building, sensores IoT, Life Layer, Commons. Visao de 10+ anos.
 
-O Yugar Vision Doc contém a visão completa — foi decomposto nos vértices relevantes:
+O Yugar Vision Doc contem a visao completa — foi decomposto nos vertices relevantes:
 - Features de Engine/MindRoot → V1 Espiral 2
-- Template de replicação → V2
-- Economia de troca e Build & Stay → V4
-- Infra física e sensores → V5 (este vértice)
-- Experimentação e primeira cabana → V6
+- Template de replicacao → V2
+- Economia de troca e Build & Stay → V5
+- Infra fisica e sensores → V4 (este vertice)
+- Experimentacao e primeira cabana → V3
 
-Material estratégico: seções 6-9 do Vision Doc (rede, buildings, sensores, Life Layer, Commons).
+Material estrategico: secoes 6-9 do Vision Doc (rede, buildings, sensores, Life Layer, Commons).
 
-Próximo passo: documenta como reflexões e notas no V1 (type: reflection/note, module: purpose, tags: #project:yugar).
+Proximo passo: documenta como reflexoes e notas no V1 (type: reflection/note, module: purpose, tags: #project:yugar).
 
-### V6 — Atlas/Yugar Lab (concept)
+### V5 — Muda · A Arvore (concept)
 
-**Roadmap:** não criado
+**Roadmap:** nao criado
 **Fase atual:** conceito
-**Depende de:** V1 Atom HS (sistema), V3 Atlas (negócio), V5 Yugar (terreno)
+**Depende de:** V1 MindRoot (maduro), V4 Yugar (terreno)
 
-O Lab é o playground — onde novas ideias, produtos e serviços são experimentados antes de virar realidade em qualquer outro vértice. O ponto onde o negócio físico (Atlas) encontra o terreno (Yugar). Experimenta, valida, distribui.
+Muda e comunidade — nasce quando o MindRoot provar que Human Systems funciona pra uma pessoa, antes de funcionar pra muitas. Nao tem prazo, nao tem pressao. Cresce como planta.
 
-Material estratégico: seção 4.4 do Yugar Vision Doc (hardware AI local), seção 13 Fase 6 (primeira cabana como protótipo).
+Material estrategico: secoes 10-11 do Yugar Vision Doc (economia de troca, Build & Stay).
 
-Próximo passo: primeira ideia concreta documentada no V1 (type: note/project, module: work, tags: #project:lab).
+Proximo passo: primeiro spec quando V1 estiver no dia a dia.
 
 ---
 
@@ -148,26 +148,26 @@ Próximo passo: primeira ideia concreta documentada no V1 (type: note/project, m
                     V2 Constellation
                    ↑ patterns, infra
                    |
-V6 Lab ←——— V1 Atom HS ———→ V4 Muda
-  ↕              |  ↑           ↓
-V3 Atlas         |  | items    V5 Yugar
+V3 Lab ←——— V1 MindRoot ———→ V5 Muda
+  ↕              |  ↑            ↓
+⬡ Atlas         |  | items     V4 Yugar
                  ↓
-            dados, padrões
+           dados, padroes
 ```
 
 | De | Para | O que flui | Quando |
 |----|------|-----------|--------|
-| V1 | V2 | Patterns de UI, service layer, auth | Após V1 Espiral 1 F7 |
-| V1 | V4 | Prova de que Human Systems funciona | Após V1 estável |
-| V1 | V5 | Dados, reflexões, padrões de longo prazo | Contínuo |
-| V1 | V6 | Sistema pra organizar experimentos | Após V1 estável |
-| V3 | V1 | Tasks e projetos via items no Atom HS | Agora (ativo) |
-| V3 | V6 | Experiência de negócio, demandas reais | Quando V6 ativar |
-| V4 | V5 | Comunidade como base pro terreno | Futuro distante |
-| V5 | V6 | Terreno como espaço físico pro Lab | Quando ambos ativos |
-| V6 | todos | Ideias validadas migram pro vértice certo | Contínuo quando ativo |
+| V1 | V2 | Patterns de UI, service layer, auth | Apos V1 Espiral 1 F7 |
+| V1 | V5 | Prova de que Human Systems funciona | Apos V1 estavel |
+| V1 | V4 | Dados, reflexoes, padroes de longo prazo | Continuo |
+| V1 | V3 | Sistema pra organizar experimentos | Apos V1 estavel |
+| ⬡ Atlas | V1 | Tasks e projetos via items no MindRoot | Agora (ativo) |
+| ⬡ Atlas | V3 | Experiencia de negocio, demandas reais | Quando V3 ativar |
+| V5 | V4 | Comunidade como base pro terreno | Futuro distante |
+| V4 | V3 | Terreno como espaco fisico pro Lab | Quando ambos ativos |
+| V3 | todos | Ideias validadas migram pro vertice certo | Continuo quando ativo |
 
-**V1 alimenta todos. V6 distribui pra todos. V3 opera independente.**
+**V1 alimenta todos. V3 distribui pra todos. Atlas opera independente (hexagono).**
 
 ---
 
@@ -180,6 +180,7 @@ V3 Atlas         |  | items    V5 Yugar
 | Guardião Audit v2.0 | Agente de geometria documental — 7 camadas de verificação, de dentro pra fora. | atom-engine-core |
 | Atom Agent v1.0 | Braço físico do Atom HS — filesystem scanner, 6 spirais, Python CLI. Seed da Espiral 3. | atom-engine-core |
 | Roadmap PHI Meta-Template v2.0 | Template universal de roadmaps com campo protocol:. | atom-engine-core |
+| Atom Identity v1.0 | Nomenclatura definitiva — Atom como universo, Engine como centro, Pentagono 5V, Atlas hexagono. | atom-engine-core (law/) |
 
 ---
 
@@ -222,7 +223,8 @@ O PENTAGON.md é revisado:
 | 2.0 | 03 Abr 2026 | Espiral 1 COMPLETA. Espiral 2 definida (5 fases PHI). Build Protocol, Guardião Audit, Roadmap PHI v2.0 referenciados. Audit AMARELO→VERDE. Debt resolvida. |
 | 2.1 | 04 Abr 2026 | Repo reorganizado: law/, specs/, wraps/, archive/. Naming convention padronizada (Meta-Template). F1 Raiz done, F2 parcial. README com arvore real. |
 | 2.2 | 04 Abr 2026 | Guardião v2.0 (7 camadas documentais). Atom Agent v1.0 referenciado como seed da Espiral 3. Routine Builder registrado. |
+| 3.0 | 04 Abr 2026 | Naming: Atom OS→Atom. Genesis sem prefixo. Pentagono: V3=Lab, V4=Yugar, V5=Muda. Atlas → hexagono (propagacao externa, fora do Pentagono). Identity spec v1.0 adicionado. |
 
 ---
 
-*Cinco vértices, um centro. O Pentágono não é seis projetos separados — é um organismo. Atom HS é o coração. O Lab é as mãos. Os outros são os órgãos que dão forma.*
+*Cinco vertices, um centro. O Pentagono nao e seis projetos separados — e um organismo. Atom Engine e o coracao. MindRoot e o espelho. O Lab e as maos. Os outros sao os orgaos que dao forma. Atlas e a primeira propagacao — o hexagono que tessela infinitamente.*
