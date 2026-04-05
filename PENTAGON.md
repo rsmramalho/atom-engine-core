@@ -1,6 +1,6 @@
 # Pentágono — Master Roadmap
 
-**Versão:** 3.1
+**Versão:** 3.2
 **Data:** 05 Abr 2026
 **Status:** active
 **Princípio:** Cinco vértices, um centro. Atom Engine alimenta todos. O Lab experimenta pra todos.
@@ -55,11 +55,11 @@ O estagio 6 (⬡) do Genesis e opcional. O Pentagono (⬠, estagio 5) nao precis
 
 ### V1 — MindRoot · O Espelho (active)
 
-**Roadmap:** ROADMAP.md no mindroot-v2 (v6.7)
-**Espiral atual:** 2 (Vida — sistema operacional) — em andamento (F1 done, F2-F4 parciais)
+**Roadmap:** ROADMAP.md no mindroot-v2 (v6.9)
+**Espiral atual:** 2 (Vida — sistema operacional) — em andamento (F1 done, F2 14/19, F3 ✓, F4 ✓)
 **Progresso Espiral 1:** COMPLETA ○ (7/7 fases)
-**Progresso Espiral 2:** 38/52 entregaveis (F1 12/12, F2 5/19, F3 15/19, F4 7/9)
-**Metricas:** 80 commits, 109 files, ~12.2K LOC, 14 pages, 6 edge functions
+**Progresso Espiral 2:** 54/60 entregaveis (F1 12/12, F2 14/19, F3 19/19 ✓, F4 9/9 ✓)
+**Metricas:** 88 commits, 109 files, ~12.5K LOC, 14 pages, 6 edge functions
 **Princípio:** Motor → Inteligência → Visualização → Reflexão
 
 Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
@@ -71,20 +71,20 @@ Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
 - ✅ F6 ⬡ Inteligência (AI triage, audit, analytics, testes)
 - ✅ F7 ○ Completude (dark mode, search, export, calendar, offline lite, polish)
 
-Espiral 2 v6.7 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
+Espiral 2 v6.9 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
 - ✅ F1 · Raiz (9 dominios, routine builder) — done
-- ◐ F2 — Conectores (API + Agent Local) — parcial (edge fns bulletproof, Atom Agent v0.1 criado, deploy pendente)
-- ◐ F3 △ Toque + alma (15/19 — toque 8/8, alma 3/6, triage 4/5)
-- ◐ F4 □ Biblioteca + grafo (7/9 — library, graph D3, connections CRUD done)
+- ◐ F2 — Conectores (14/19 — Gmail+Calendar+Agent CLI done, pendente: body.location, AtomDrive, watch, Haiku)
+- ✅ F3 △ Toque + alma (19/19 — toque 8/8, alma 6/6, triage 5/5)
+- ✅ F4 □ Biblioteca + grafo (9/9 — library, graph D3+domain filter, connections CRUD+prompt)
 - ⚪ F5 ⬠ Companheiro — futuro
 
-Seeds Espiral 3: Escudo (acoes nos conectores), Resiliencia (offline + Ollama), Propagacao (estagio 6 real), Atom Agent v2+ (evolucao do v0.1 de F2: watch mode, Haiku, Drive scan).
+Seeds Espiral 3: Escudo (acoes nos conectores, blocos rituais no Calendar — scope write), Resiliencia (offline + Ollama), Propagacao (estagio 6 real), Atom Agent v2+ (watch mode, Haiku, Drive scan).
 
-**Debt:** Wrap soul: aurora data nao flui pro wrap body (shift=null). Chips clicaveis no ItemDetail. Graph domain filter (so tem module). Connection prompt stage 4.
+**Debt:** ZERO. Debt anterior resolvida neste sprint (aurora→wrap, chips, graph filter, connection prompt).
 **Deploy:** mindroot-v2.vercel.app / mindroot.com.au
-**Audit:** 05 Abr 2026 — VERDE. Debt antiga resolvida (dark mode, realtime).
-**Cross-check:** 05 Abr 2026 — ROADMAP v6.7 synced. F2 edge functions delivered (e26891a). Atom Agent repo criado (rsmramalho/atom-agent, 2 commits). Deploy Supabase pendente (migration 009 + edge functions).
-**Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo). Testado com protocol:foundation na migration 007.
+**Audit:** 05 Abr 2026 — VERDE. Sprint Fechamento Espiral 2 executado: 2 fases fechadas (F3, F4), F2 avancada.
+**Cross-check:** 05 Abr 2026 — ROADMAP v6.9 synced. Sprint: 8 commits, 4 features, 3 fixes. Gmail #who tags, calendar timezone, morph RPC, connection prompt, domain filter, soul loop completo.
+**Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo). Sprint usou GUARDIÃO constraints em cada fase.
 
 ### V2 — Constellation OS (paused)
 
@@ -228,6 +228,7 @@ O PENTAGON.md é revisado:
 | 2.2 | 04 Abr 2026 | Guardião v2.0 (7 camadas documentais). Atom Agent v1.0 referenciado como seed da Espiral 3. Routine Builder registrado. |
 | 3.0 | 04 Abr 2026 | Naming: Atom OS→Atom. Genesis sem prefixo. Pentagono: V3=Lab, V4=Yugar, V5=Muda. Atlas → hexagono (propagacao externa, fora do Pentagono). Identity spec v1.0 adicionado. |
 | 3.1 | 05 Abr 2026 | Cross-repo sync: V1 Espiral 2 status real (F2-F4 parciais, 38/52 entregaveis). Atom Agent movido de Seed pra F2 (v0.1 implementado, repo criado). Metricas V1 atualizadas (80 commits, 12.2K LOC). Debt atualizada. |
+| 3.2 | 05 Abr 2026 | Sprint Fechamento Espiral 2 — wrap. V1: F3 19/19 ✓ (soul loop completo, morph, chips), F4 9/9 ✓ (connection prompt, domain filter), F2 14/19 (Gmail #who, calendar tz). Debt→ZERO. Ritual blocks→Seeds. 8 commits, ROADMAP v6.9. |
 
 ---
 
