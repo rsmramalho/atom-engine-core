@@ -29,6 +29,22 @@ atom-engine-core/
 │   ├── system_spec_guardiao-audit_v1-0.md
 │   ├── system_spec_yugar-vision_v0-1.md
 │   └── system_template_roadmap-phi_v2-0.md
+├── features/                           Feature registry (14 features)
+│   ├── system_doc_feature-registry_v1-0.md
+│   ├── feature_raiz_v1-0.md
+│   ├── feature_library_v1-0.md
+│   ├── feature_pipeline_v1-0.md
+│   ├── feature_wrap_v1-0.md
+│   ├── feature_soul_v1-0.md
+│   ├── feature_triage_v1-0.md
+│   ├── feature_captura_v1-0.md
+│   ├── feature_graph_v1-0.md
+│   ├── feature_conectores_v1-0.md
+│   ├── feature_companheiro_v1-0.md
+│   ├── feature_calendar_v1-0.md
+│   ├── feature_projects_v1-0.md
+│   ├── feature_analytics_v1-0.md
+│   └── feature_settings_v1-0.md
 ├── wraps/                              Session wraps
 ├── design/
 │   └── wireframes/                     11 interactive wireframes (HTML)
