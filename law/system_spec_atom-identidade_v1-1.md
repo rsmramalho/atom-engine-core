@@ -4,28 +4,28 @@
 ║ id:       [a gerar no Supabase]      ║
 ║ type:     spec                       ║
 ║ module:   bridge                     ║
-║ state:    structured                 ║
+║ state:    connected                  ║
 ║ status:   active                     ║
-║ stage:    3 △ Triangulo              ║
+║ stage:    5 ⬠ Pentagono             ║
 ║ tags:     [#system, #identity,       ║
 ║            #naming, #geometria]      ║
 ║ source:   claude-project             ║
 ║ created:  2026-04-04                 ║
-║ updated:  2026-04-04                 ║
+║ updated:  2026-04-07                 ║
 ╠══════════════════════════════════════╣
 ║ connections:                         ║
-║   → references: Genesis v5.0.2       ║
-║   → references: Marco Zero v2.0     ║
+║   → references: Genesis v5.0.4       ║
+║   → references: Marco Zero v3.1     ║
 ║   → feeds: PENTAGON.md              ║
 ║   → feeds: all READMEs              ║
 ╚══════════════════════════════════════╝
 
 # Atom — Identidade e Nomenclatura
 
-**Versao:** 1.1
+**Versao:** 1.2
 **Data:** 06 Abr 2026
 **Status:** Definitive
-**Referencia:** Genesis v5.0.2 + Marco Zero v2.0
+**Referencia:** Genesis v5.0.4 + Marco Zero v3.1
 **Principio:** O universo todo e nomeado pela menor materia. A geometria nao foi adicionada ao design — emergiu dele.
 
 ---
@@ -186,7 +186,7 @@ A mesma geometria. Tres escalas. O fractal e a assinatura do design.
 | **Atom** | O universo — nome guarda-chuva de tudo | Nome de um produto especifico |
 | **Atom Engine** | O centro — protocolo, Genesis, schema, Supabase | Um app, uma interface, um produto |
 | **Atom HS** | Subtitulo filosofico (Human Systems) | Nome principal do produto |
-| **Genesis** | A lei que governa o Engine. Sem prefixo — e so Genesis (versao atual: v5.0.2) | Codigo, UI, ou implementacao. Nao e "Atom Genesis" |
+| **Genesis** | A lei que governa o Engine. Sem prefixo — e so Genesis (versao atual: v5.0.4) | Codigo, UI, ou implementacao. Nao e "Atom Genesis" |
 | **MindRoot** | V1 do Pentagono — o visualizador pessoal | O Engine, o protocolo, ou o universo |
 | **Pentagono** | Projetos do criador + Engine no centro | Um produto, uma empresa |
 | **Hexagono** | Primeiro tesselo externo (Atlas) | Parte do Pentagono |
@@ -234,7 +234,7 @@ A mesma geometria. Tres escalas. O fractal e a assinatura do design.
 | CLAUDE.md (mindroot-v2) | Alinhar nomenclatura |
 | System prompt (Project Atom) | Alinhar com este documento |
 | Memoria do Claude | Atualizar termos |
-| Genesis v5 KB | Titulo do documento diz "Atom Genesis" — avaliar se muda pra "Genesis". Conteudo ja esta correto |
+| Genesis v5.0.4 KB | Titulo do documento diz "Atom Genesis" — avaliar se muda pra "Genesis". Conteudo ja esta correto |
 | Marco Zero KB | Minima — trocar "Atom OS" por "Atom" |
 
 ---
@@ -245,6 +245,7 @@ A mesma geometria. Tres escalas. O fractal e a assinatura do design.
 |--------|------|---------|
 | 1.0 | 04 Abr 2026 | Documento inaugural. Atom como universo, Engine como centro, Pentagono com 5 vertices (V1 MindRoot, V2 Constellation, V3 Lab, V4 Yugar, V5 Muda), Atlas como hexagono (propagacao externa), MindRoot como V1. Genesis sem prefixo. Geometria sagrada documentada em 3 escalas. |
 | 1.1 | 06 Abr 2026 | Generalizado: Pentagono como conceito universal (cada pessoa constroi o seu). MindRoot como V1 (nao como projeto pessoal). Referencias nominais removidas. |
+| 1.2 | 07 Abr 2026 | Envelope atualizado: Genesis v5.0.2→v5.0.4, Marco Zero v2.0→v3.1, state structured→connected (stage 3→5) — item tem connections, state machine exige stage 5. |
 
 ---
 

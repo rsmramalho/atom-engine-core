@@ -1,7 +1,7 @@
 # Atom Genesis v4 + AtomItem Schema v2
 ## O Contrato Universal do Atom Engine
 
-**Versão:** 5.0.3
+**Versão:** 5.0.4
 **Data:** 01 Abr 2026
 **Status:** Definitive Spec — Marco Zero
 **Evolução:** Genesis v1→v2→v3→v4→v5 | Schema v1→v2
@@ -25,6 +25,10 @@ O Atom Engine opera sob o princípio de que um item pode existir no sistema em d
 1. **O schema é o contrato, não o código.** Se amanhã troca o Supabase por Postgres puro, o Drive por Obsidian local, o Claude por outro LLM — o schema é o mesmo.
 2. **Documentar é executar.** Cada wrap, checkpoint, spec — é trabalho real. Não é overhead.
 3. **Nada se perde.** Entropia é reciclagem, não destruição. Mutação preserva identidade. O UUID é eterno.
+
+### Anterioridade dos documentos-lei
+
+Os documentos-lei (Genesis, Marco Zero, Meta-Template, Identidade) são anteriores ao contrato que definem. Não estão sujeitos ao pipeline (inbox obrigatório) nem ao ATOM ENVELOPE (quarta lei) porque existiam antes dessas regras existirem. A semente não passa pelo solo que ela mesma criou. Isso não é exceção — é arquitetura. Todo item que nasce *depois* do contrato segue o contrato sem exceção.
 
 ### Arquitetura Cósmica
 
@@ -79,7 +83,7 @@ Os 3 documentos-lei, 7 estágios, 8 módulos ressoam com a sequência natural. O
 | recipe, workout | 3 (Triângulo) | Template completo. Connections são bônus |
 | checkpoint | 3 (Triângulo) | Documento estruturado |
 | ritual | 3 (Triângulo) | Body schema (intention, anchors, time_window). Precisa de estrutura |
-| review | 3 (Triângulo) | Body schema (subject, rating, highlights). Precisa de estrutura |
+| review | 3 (Triângulo) | Body schema (subject, rating, verdict, highlights, lowlights). Precisa de estrutura |
 | template | 3 (Triângulo) | Define a geometria de um type. Precisa de estrutura |
 | spec | 5 (Pentágono) | Spec sem connections não especifica nada |
 | project | 5 (Pentágono) | Sem connections = ideia, não projeto |
@@ -374,7 +378,7 @@ A tabela abaixo documenta o design original dos body schemas. A implementação 
 | recipe | `{ cuisine, serves, prep_time, cook_time, difficulty, ingredients[], steps[] }` | body |
 | workout | `{ focus, frequency, level, duration, equipment[], exercises[] }` | body |
 | ritual | `{ intention, anchors[], time_window, duration }` | purpose |
-| review | `{ period, checklist_items[], reflection, adjustments }` | bridge |
+| review | `{ subject, rating, verdict, highlights, lowlights }` | bridge |
 | spec | `{ overview, architecture, data_model, implementation, open_questions[] }` | work |
 | checkpoint | `{ done[], pending[], decisions[], next_steps[] }` | work |
 | session-log | `{ summary, files_created[], decisions[], pending[], continuation_prompt }` | bridge |
@@ -1164,6 +1168,7 @@ O Genesis define O QUE (schema, state machine, motores, serialização). O Marco
 | Genesis 5.0.1 + Schema 2.0 | 01 Abr 2026 | 5 decisões fechadas: §8.6 type_schemas=JSON config no repo (não SQL), §8.3 export Drive=manual só (não automático), Obsidian=export sob demanda (mantém), migração=recriar no MindRoot, timeline=implementar enquanto documenta. type-schemas.json criado com 23 types. |
 | Genesis 5.0.2 + Schema 2.0 | 04 Abr 2026 | Pisos: ritual (3), review (3), template (3) adicionados à tabela Part 2. §4.4 Type Registry: type-schemas.json declarado como referência canônica dos body schemas. Tabela original preservada como design intent v5.0.1. Zero mudanças estruturais. |
 | Genesis 5.0.3 + Schema 2.0 | 06 Abr 2026 | SQL fix: v_below_floor e check_orphan_downgrade agora incluem ritual(3), review(3), template(3) no CASE — alinhando SQL com tabela de pisos Part 2. Regra de template universal referenciada (ATOM.md). Zero mudanças estruturais. |
+| Genesis 5.0.4 + Schema 2.0 | 07 Abr 2026 | Anterioridade dos documentos-lei declarada (Part 1): docs-lei precedem o contrato, não estão sujeitos a pipeline nem envelope. Review body schema alinhado com type-schemas.json (Part 4.4). Zero mudanças estruturais. |
 
 ---
 

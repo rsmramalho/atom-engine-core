@@ -1,22 +1,6 @@
----
-title: "Marco Zero — Guia Operacional"
-type: spec
-module: bridge
-tags: [atom-engine, marco-zero, operacional, perfil, ritual, raiz]
-status: active
-source: claude-project
-created: 2026-03-22
-updated: 2026-04-01
-connections:
-  - target: spec_atom-genesis-v5-schema-v2
-    relation: references
-  - target: template_meta-template_v1-0
-    relation: references
----
-
 # Marco Zero — Guia Operacional
 
-**Versão:** 3.0
+**Versão:** 3.1
 **Última atualização:** 06 Abr 2026
 **Princípio:** Este documento responde a pergunta mais básica de qualquer usuario: "Acordei. E agora?"
 
@@ -231,7 +215,8 @@ Pastas só são criadas quando o primeiro export vai pra lá.
 | 1.3 | 2026-03-31 | Clean start — connections Genesis v4.2, Drive map atualizado, Soul Layer seção 5, regra inbox obrigatório, versão sincronizada |
 | 2.0 | 2026-04-01 | Arquitetura v5: Drive→export (seção 7), MindRoot→cockpit principal (seção 3.2), wrap→Supabase (seção 2.3), Genesis v5 referenciado |
 | 3.0 | 2026-04-06 | Reescrita universal: perfil pessoal vira exemplo anonimizado, emails/apps viram template, ritual do dia generalizado, regras do agente universais. O documento agora serve qualquer usuario do Atom, nao um usuario especifico. |
+| 3.1 | 2026-04-07 | YAML frontmatter legado removido (docs-lei são anteriores ao contrato — ver Genesis v5.0.4 Part 1). Rodapé corrigido: Drive removido como source of truth. |
 
 ---
 
-*Este documento é a fundação do Atom Engine. Vive na Knowledge base do Project Atom e no Google Drive como source of truth.*
+*Este documento é a fundação operacional do Atom Engine. Vive na Knowledge base do Project Atom como source of truth.*

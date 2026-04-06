@@ -1,8 +1,8 @@
 # Atom Meta-Template v1.1
 ## O Molde dos Moldes
 
-**Versão:** 1.1
-**Data:** 01 Abr 2026
+**Versão:** 1.2
+**Data:** 06 Abr 2026
 **Status:** Definitive
 **Referência:** Genesis v5 + AtomItem Schema v2
 **Princípio:** Se a geometria deste documento estiver perfeita, todo template que nascer dele herda essa geometria.
