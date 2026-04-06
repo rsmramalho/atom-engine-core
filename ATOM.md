@@ -1,6 +1,6 @@
 # Atom — O Método
 
-**Versão:** 1.1
+**Versão:** 1.2
 **Data:** 06 Abr 2026
 **Princípio:** Este documento é a geometria do método. Cada estágio contém todos os anteriores. O triângulo não existe sem a linha. O círculo não existe sem cada estágio antes dele.
 
@@ -25,6 +25,22 @@ O Atom Engine opera sob três leis:
 1. **O schema é o contrato, não o código.** Se amanhã troca o Supabase por outro banco, o React por outro framework — o contrato é o mesmo.
 2. **Documentar é executar.** Cada wrap, cada spec, cada decisão registrada — é trabalho real.
 3. **Nada se perde.** Entropia é reciclagem, não destruição. O UUID é eterno.
+
+### A quarta lei
+
+4. **O sistema classifica a si mesmo.** Todo documento no ecossistema Atom e um AtomItem. Segue o Meta-Template. Tem envelope (type, module, state, stage, connections). Sem excecao. Os proprios docs-lei sao instancias. O roadmap e uma instancia. Cada feature spec e uma instancia. Se nao tem envelope, nao pertence ao sistema.
+
+### Os dois trilhos
+
+O Atom nao existe sozinho. Ele precisa de uma construcao pra se provar. E a construcao precisa do Atom pra ter fundacao.
+
+**Trilho 1 — Atom (o universo).** O protocolo. O Genesis. Os 3 pilares. O Meta-Template. Universal. Qualquer pessoa pega e constroi o que quiser. O Engine e agnostico.
+
+**Trilho 2 — O Pentagono (a construcao).** A implementacao de quem esta construindo. As escolhas. Os vertices. Cada escolha testa o Atom na pratica. Quando a construcao encontra algo que nao funciona, o Atom melhora. Quando o Atom evolui, a construcao se adapta.
+
+Os dois andam lado a lado com perspectivas diferentes. O Atom sem construcao e teoria. A construcao sem Atom e improviso. Juntos, um prova que o outro funciona.
+
+**ATOM.md** e o mapa do universo. **PENTAGON.md** e o mapa da construcao. Dois documentos mestres, duas perspectivas, validando um ao outro.
 
 ### O item
 
@@ -154,29 +170,32 @@ Supabase commita → seeds geradas → amanhã começa de novo
 
 ### Fundação 1: Design system
 
-**Tipografia:** DM Sans. Dois pesos: 400 (body) e 500 (heading). Nunca 600+.
+O Atom Engine define princípios visuais universais. Cada vertex implementa com suas escolhas de fonte, componentes e tokens.
 
-**Superfícies:**
+**Cores por módulo (8 — universais):**
+Cada módulo do Genesis tem uma cor fixa. A cor aparece como borda lateral em cards, chips de type, e filtros. Os 8 módulos: work, body, mind, family, purpose, bridge, finance, social.
+
+**Cores por estágio (7 — universais):**
+Cada estágio do Genesis tem uma cor. Stage bars mostram a distribuição de items por estágio. Os 7 estágios seguem a geometria: · — △ □ ⬠ ⬡ ○.
+
+**Cores por ritual (3 — universais):**
+Aurora (quente), zênite (neutro), crepúsculo (frio). Cada período do dia tem uma paleta visual que o usuário associa instintivamente.
+
+**Superfícies (3 camadas — universais):**
 - `bg` — fundo da página
-- `card` — cards com border 0.5px, border-radius 14px, padding 14px 16px
-- `surface` — fundo secundário (inputs, chips)
+- `card` — cards e containers
+- `surface` — fundo secundário (inputs, chips, overlays)
 
-**Cores por módulo (8):** work, body, mind, family, purpose, bridge, finance, social. Cada módulo tem uma cor. A cor aparece como borda lateral em cards, chips de type, e filtros.
+**Princípios (universais):**
+- Dark mode obrigatório. Toda cor tem variante escura.
+- Mobile-first. 360×800 como viewport mínimo.
+- Dois pesos tipográficos: regular (body) e medium (heading). Nunca bold pesado (600+).
+- Cores de módulo e estágio nunca mudam entre vertices — um item do módulo `work` é da mesma cor no MindRoot e no Constellation.
 
-**Cores por estágio (7):** cada estágio do Genesis tem uma cor. Stage bars mostram a distribuição de items por estágio.
+**Implementação por vertex:**
+Cada vertex define: fonte, hex values específicos, componentes (card, chip, input, button), spacing scale, border-radius, e qualquer token adicional. Vive em `[vertex]/design/design-system.md`.
 
-**Cores por ritual (3):** aurora (dourado), zênite (neutro), crepúsculo (roxo escuro).
-
-**Componentes base:**
-- Card: `bg-card border border-border rounded-[14px] p-3.5`
-- Chip/pill: `text-[10px] px-2 py-0.5 rounded-lg`
-- Input: `border border-border rounded-xl px-4 py-3 text-sm bg-card`
-- Button primary: `bg-accent text-white rounded-xl px-5 py-2.5 text-sm`
-- Section label: `text-[11px] font-medium tracking-[1.2px] uppercase text-text-muted`
-
-**Dark mode:** obrigatório. Toda cor tem variante escura. Fundo escuro = `#18171a`. Cards = `#201e24`.
-
-**Referência canônica:** `src/index.css` (tokens) + este documento (regras). Se divergirem, este documento ganha.
+Referência canônica do V1: `mindroot/design/design-system.md` + `src/index.css` (tokens CSS).
 
 ### Fundação 2: Error handling
 
@@ -451,8 +470,8 @@ Cada vértice herda os 3 pilares, adaptando o conteúdo:
 
 | Pilar | MindRoot (V1) | Constellation (V2) |
 |-------|--------------|---------------------|
-| Emotion | Como o Rick está | Como a empresa está (health score) |
-| Action | O que o Rick faz | O que a empresa precisa fazer (diagnóstico) |
+| Emotion | Como o usuario está | Como a empresa está (health score) |
+| Action | O que o usuario faz | O que a empresa precisa fazer (diagnóstico) |
 | Time | Quando acontece | Timeline do projeto (roadmap) |
 
 **A matriz replica.** Centro duplo + 4 camadas × 3 pilares = estrutura de build pra qualquer vértice. Muda a implementação, nunca o contrato.
@@ -461,43 +480,27 @@ Cada vértice herda os 3 pilares, adaptando o conteúdo:
 
 ```
 atom-engine-core/
-├── ATOM.md                    ← ESTE DOCUMENTO (o método)
-├── genesis.md                 ← O contrato (schema puro)
-├── pentagon.md                ← Mapa cross-vertex
+├── ATOM.md                    ← o metodo (raiz)
+├── PENTAGON.md                ← master roadmap do ecossistema
 │
-├── engine/                    ← Specs do motor
-│   ├── state-machine.md
-│   ├── type-registry.md
-│   ├── sql-schema.md
-│   ├── operations.md          ← RPCs
-│   └── audit.md
+├── law/                       ← a semente (sagrada)
+│   ├── genesis.md
+│   ├── marco-zero.md
+│   ├── meta-template.md
+│   └── identidade.md
 │
-├── operations/
-│   ├── marco-zero.md          ← Operacional do Rick
-│   ├── build-protocol.md      ← Centro duplo + 4 camadas (absorve genesis-build-protocol v1)
-│   └── meta-template.md
-│
-├── mindroot/                  ← V1
+├── mindroot/                  ← V1 (o visualizador)
 │   ├── roadmap.md
-│   ├── pillars/
-│   │   ├── emotion.md
-│   │   ├── action.md
-│   │   └── time.md
-│   ├── design/
-│   │   ├── design-system.md
-│   │   ├── decisions.md       ← 74 UX decisions consolidadas
-│   │   └── wireframes/
-│   └── branches/
-│       ├── raiz.md
-│       ├── search.md
-│       ├── connectors.md
-│       └── ...
+│   ├── features/              ← 14 feature specs
+│   └── design/                ← wireframes + design system
 │
-└── constellation/             ← V2 (mesma estrutura)
-    └── ...
+├── specs/                     ← specs cross-vertex
+├── sql/                       ← schema de referencia
+├── wraps/                     ← historico de sessoes
+└── archive/                   ← morto
 ```
 
-**Regra:** se não está nessa árvore, não existe. Chats são descartáveis. Memory é índice. A árvore é a verdade.
+Regra: cada vertex ganha sua pasta. mindroot/ e V1. constellation/ sera V2. A semente (law/) nao muda. O metodo (ATOM.md) nao muda. So cresce um novo galho.
 
 ---
 
@@ -507,6 +510,7 @@ atom-engine-core/
 |--------|------|-------------|
 | 1.0 | 06 Abr 2026 | Documento inicial. Nasceu de sessão de recapitulação após 8 sprints revertidos. Formaliza pilares, matriz, fundações, enforcement. |
 | 1.1 | 06 Abr 2026 | Centro duplo adicionado ao Pentágono (GUARDIÃO + AUDITOR). Hook 1 do Hexágono atualizado com dois níveis. genesis-build-protocol absorvido em operations/build-protocol.md. |
+| 1.2 | 06 Abr 2026 | Quarta lei adicionada: "o sistema classifica a si mesmo" — todo documento segue Meta-Template. Dois trilhos documentados: Atom (universo) e Pentagono (construcao) andam lado a lado validando um ao outro. Arvore de documentos alinhada com estrutura real do repo. |
 
 ---
 

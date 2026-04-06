@@ -438,8 +438,8 @@ Estes types NÃO precisam de auto-triage, validação, ou prompt de conexão. O 
 
 | Conceito | Tag | Exemplo | Uso |
 |----------|-----|---------|-----|
-| Participante | `#who:*` | `#who:de`, `#who:flora` | Pessoa envolvida no item |
-| Localização | `#location:*` | `#location:fazendinha`, `#location:brendale` | Onde acontece/aconteceu |
+| Participante | `#who:*` | `#who:joao`, `#who:maria` | Pessoa envolvida no item |
+| Localização | `#location:*` | `#location:parque`, `#location:escritorio` | Onde acontece/aconteceu |
 
 **Motivos:**
 - Core continua enxuto (princípio Genesis: "o schema é o contrato")
@@ -448,7 +448,7 @@ Estes types NÃO precisam de auto-triage, validação, ou prompt de conexão. O 
 - Location só faz sentido pra tipos específicos — não pra spec, wrap, ou note
 - Se no futuro precisar de localização estruturada (lat/long, endereço), vira extension nova — mas esse futuro não é agora
 
-**No body schema de types específicos:** workout e recommendation PODEM ter campos de location no body (ex: `"location": "Fazendinha Mt Samson"`) quando o template desse type definir. A tag `#location:*` é pra queries cross-type. Ambos coexistem.
+**No body schema de types específicos:** workout e recommendation PODEM ter campos de location no body (ex: `"location": "Parque Central"`) quando o template desse type definir. A tag `#location:*` é pra queries cross-type. Ambos coexistem.
 
 ---
 
@@ -493,6 +493,7 @@ Nem tudo no Atom Drive é um AtomItem. Alguns espaços existem fora da geometria
 |--------|------|---------|
 | 1.0 | 29 Mar 2026 | Documento inicial — meta-template completo + decisão location/participants via tags |
 | 1.1 | 01 Abr 2026 | Genesis v5: ATOM ENVELOPE e YAML redefinidos como formatos de export (fonte canônica = Supabase). Seções 2 e 3 anotadas. Referências atualizadas. |
+| 1.2 | 06 Abr 2026 | Exemplos de tags anonimizados. Zero mudancas estruturais. |
 
 ---
 

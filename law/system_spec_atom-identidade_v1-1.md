@@ -22,8 +22,8 @@
 
 # Atom — Identidade e Nomenclatura
 
-**Versao:** 1.0
-**Data:** 04 Abr 2026
+**Versao:** 1.1
+**Data:** 06 Abr 2026
 **Status:** Definitive
 **Referencia:** Genesis v5.0.2 + Marco Zero v2.0
 **Principio:** O universo todo e nomeado pela menor materia. A geometria nao foi adicionada ao design — emergiu dele.
@@ -68,7 +68,7 @@ O Engine vive no repo `atom-engine-core`. Qualquer produto pode ser construido e
 
 ### 2.2 O Pentagono: 5 vertices + centro
 
-O Pentagono e o **sistema solar do criador.** Sao os 5 projetos que nasceram *de dentro pra fora*, orbitando o Atom Engine no centro. E pessoal — o Pentagono e de Rick. A geometria se fechou com 5 vertices. Esta fechado, mas sempre aberto: o que nasce de cada vertice nao tem limite.
+O Pentagono e o **sistema solar do criador.** Sao os projetos que nascem *de dentro pra fora*, orbitando o Atom Engine no centro. E pessoal — cada pessoa constroi o seu. O primeiro Pentagono e o do fundador, com 5 vertices. A geometria se fechou com 5, mas cada pessoa define os seus.
 
 ```
               V1 MindRoot
@@ -118,7 +118,7 @@ E como diz o Genesis: **o estagio 6 e opcional.** O Pentagono nao precisa de pro
 
 ### 2.4 MindRoot — o visualizador
 
-MindRoot e o que Rick fez com o protocolo. E a **sua implementacao** do Atom Engine. Se amanha alguem pegar o Genesis e construir outra interface — pode. O Engine e agnostico. MindRoot e a escolha.
+MindRoot e a primeira implementacao (V1) do Atom Engine. E o que o protocolo parece quando ganha interface. Se amanha alguem pegar o Genesis e construir outra interface — pode. O Engine e agnostico. MindRoot e a escolha.
 
 **MindRoot nao e o Atom Engine.** Hoje estao acoplados por praticidade (mesmo repo, mesmo deploy). Eventualmente se separam. A arquitetura ja permite: Engine = Supabase + Genesis, MindRoot = React app que consome o Engine.
 
@@ -188,7 +188,7 @@ A mesma geometria. Tres escalas. O fractal e a assinatura do design.
 | **Atom HS** | Subtitulo filosofico (Human Systems) | Nome principal do produto |
 | **Genesis** | A lei que governa o Engine. Sem prefixo — e so Genesis (versao atual: v5.0.2) | Codigo, UI, ou implementacao. Nao e "Atom Genesis" |
 | **MindRoot** | V1 do Pentagono — o visualizador pessoal | O Engine, o protocolo, ou o universo |
-| **Pentagono** | 5 projetos do Rick + Engine no centro | Um produto, uma empresa |
+| **Pentagono** | Projetos do criador + Engine no centro | Um produto, uma empresa |
 | **Hexagono** | Primeiro tesselo externo (Atlas) | Parte do Pentagono |
 | **O Espelho** | Apelido do MindRoot (V1) | Nome tecnico |
 | **AtomItem** | A menor unidade do sistema — um item | Um arquivo, um documento |
@@ -244,6 +244,7 @@ A mesma geometria. Tres escalas. O fractal e a assinatura do design.
 | Versao | Data | Mudanca |
 |--------|------|---------|
 | 1.0 | 04 Abr 2026 | Documento inaugural. Atom como universo, Engine como centro, Pentagono com 5 vertices (V1 MindRoot, V2 Constellation, V3 Lab, V4 Yugar, V5 Muda), Atlas como hexagono (propagacao externa), MindRoot como V1. Genesis sem prefixo. Geometria sagrada documentada em 3 escalas. |
+| 1.1 | 06 Abr 2026 | Generalizado: Pentagono como conceito universal (cada pessoa constroi o seu). MindRoot como V1 (nao como projeto pessoal). Referencias nominais removidas. |
 
 ---
 

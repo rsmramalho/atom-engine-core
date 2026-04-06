@@ -1,7 +1,7 @@
 # Atom Genesis v4 + AtomItem Schema v2
 ## O Contrato Universal do Atom Engine
 
-**Versão:** 5.0.2
+**Versão:** 5.0.3
 **Data:** 01 Abr 2026
 **Status:** Definitive Spec — Marco Zero
 **Evolução:** Genesis v1→v2→v3→v4→v5 | Schema v1→v2
@@ -570,7 +570,8 @@ BEGIN
       WHEN 'project' THEN 5 WHEN 'spec' THEN 5
       WHEN 'task' THEN 3 WHEN 'habit' THEN 3
       WHEN 'recipe' THEN 3 WHEN 'workout' THEN 3
-      WHEN 'checkpoint' THEN 3
+      WHEN 'checkpoint' THEN 3 WHEN 'ritual' THEN 3
+      WHEN 'review' THEN 3 WHEN 'template' THEN 3
       WHEN 'session_log' THEN 7 WHEN 'wrap' THEN 7
       ELSE 2
     END;
@@ -777,7 +778,8 @@ SELECT i.id, i.title, i.type, i.genesis_stage,
     WHEN 'spec' THEN 5
     WHEN 'task' THEN 3 WHEN 'habit' THEN 3
     WHEN 'recipe' THEN 3 WHEN 'workout' THEN 3
-    WHEN 'checkpoint' THEN 3
+    WHEN 'checkpoint' THEN 3 WHEN 'ritual' THEN 3
+    WHEN 'review' THEN 3 WHEN 'template' THEN 3
     WHEN 'session_log' THEN 7 WHEN 'wrap' THEN 7
     ELSE 2
   END AS required_floor
@@ -787,7 +789,8 @@ AND i.genesis_stage < CASE i.type
     WHEN 'project' THEN 5 WHEN 'spec' THEN 5
     WHEN 'task' THEN 3 WHEN 'habit' THEN 3
     WHEN 'recipe' THEN 3 WHEN 'workout' THEN 3
-    WHEN 'checkpoint' THEN 3
+    WHEN 'checkpoint' THEN 3 WHEN 'ritual' THEN 3
+    WHEN 'review' THEN 3 WHEN 'template' THEN 3
     WHEN 'session_log' THEN 7 WHEN 'wrap' THEN 7
     ELSE 2
   END;
@@ -1160,6 +1163,7 @@ O Genesis define O QUE (schema, state machine, motores, serialização). O Marco
 | Genesis 5.0 + Schema 2.0 | 01 Abr 2026 | Revisão arquitetural: Supabase é source of truth (ponte eliminada). Drive→export sob demanda. Obsidian→export sob demanda. MindRoot→porta da frente. Wrap→body JSONB estruturado. Templates→type_schemas centralizados. Naming→display/export format. Raiz integrado (seção 4): 9 domínios × 7 estágios, onboarding + feature permanente. Parts 1-7, 10-12 intactas. |
 | Genesis 5.0.1 + Schema 2.0 | 01 Abr 2026 | 5 decisões fechadas: §8.6 type_schemas=JSON config no repo (não SQL), §8.3 export Drive=manual só (não automático), Obsidian=export sob demanda (mantém), migração=recriar no MindRoot, timeline=implementar enquanto documenta. type-schemas.json criado com 23 types. |
 | Genesis 5.0.2 + Schema 2.0 | 04 Abr 2026 | Pisos: ritual (3), review (3), template (3) adicionados à tabela Part 2. §4.4 Type Registry: type-schemas.json declarado como referência canônica dos body schemas. Tabela original preservada como design intent v5.0.1. Zero mudanças estruturais. |
+| Genesis 5.0.3 + Schema 2.0 | 06 Abr 2026 | SQL fix: v_below_floor e check_orphan_downgrade agora incluem ritual(3), review(3), template(3) no CASE — alinhando SQL com tabela de pisos Part 2. Regra de template universal referenciada (ATOM.md). Zero mudanças estruturais. |
 
 ---
 
