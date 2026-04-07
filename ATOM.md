@@ -24,8 +24,8 @@
 
 # Atom — O Método
 
-**Versão:** 1.3
-**Data:** 07 Abr 2026
+**Versão:** 1.4
+**Data:** 08 Abr 2026
 **Princípio:** Este documento é a geometria do método. Cada estágio contém todos os anteriores. O triângulo não existe sem a linha. O círculo não existe sem cada estágio antes dele.
 
 ---
@@ -187,6 +187,44 @@ Supabase commita → seeds geradas → amanhã começa de novo
 | Emotion × Action | Triage pode considerar emoção futuramente. Hoje: emotion_after em tasks | action.md |
 | Action × Time | Items com due_date aparecem no calendar. Wrap commita items. | time.md |
 | Todos × Raiz | Raiz dá contexto a todos. 9 domínios são lentes sobre os mesmos items. | raiz.md (branch) |
+
+---
+
+## A Árvore da Vida — as 10 camadas do Engine OS
+
+A Árvore da Vida (Etz Chaim) tem 10 sefirot — 10 emanações pelas quais o infinito se manifesta no mundo. O Engine OS tem 10 camadas — 10 emanações pelas quais o sistema se manifesta na vida de uma pessoa. A correspondência não foi planejada. Emergiu.
+
+As 10 sefirot se organizam em 3 pilares: o pilar da Misericórdia (expansão), o pilar da Severidade (forma), e o pilar do Equilíbrio (centro). O Atom tem 3 pilares: Emotion (expansão — como você tá), Time (forma — quando acontece), Action (equilíbrio — o que você faz). A geometria é a mesma.
+
+### As 10 camadas
+
+| # | Camada | Sefirah | O que é | Escopo |
+|---|--------|---------|---------|--------|
+| 1 | Casa | Keter (Coroa) | Onde os dados moram. Banco, tabelas, JSONB. O schema é o contrato, não o banco. | Engine |
+| 2 | Porta | Chokmah (Sabedoria) | Quem entra e como. Auth, API, RLS. O primeiro discernimento. | Engine |
+| 3 | Língua | Binah (Entendimento) | O vocabulário. 23 types, 8 modules, 8 states, 8 relations. A língua é uma só — o sotaque muda por vértice. | Engine |
+| 4 | Pilares | Chesed (Expansão) | A razão de existir. Emotion, Action, Time. Toda funcionalidade vive num pilar ou na intersecção deles. | Engine |
+| 5 | Motor | Gevurah (Força) | O que trabalha sozinho. State machine, triage, FSM, wrap, propagação. O humano despeja, o motor organiza. | Engine |
+| 6 | Cara | Tiferet (Beleza) | O que o humano vê e toca. Shell, nav, design system. Mobile-first no dev, carinho igual no desktop. | Engine |
+| 7 | Bocas | Netzach (Persistência) | Como a vida entra. Captura manual, Email, Calendar, Agent. Quatro universais — a vida nunca para de fluir. | Engine |
+| 8 | Olhos | Hod (Esplendor) | Como o humano enxerga. Library, Search, Pipeline, Graph, Analytics, Projects, Calendar view, Email view. | Engine |
+| 9 | Home | Yesod (Fundação) | A personalidade. O primeiro ecrã. O ponto onde o vértice encontra o Engine. | Vértice |
+| 10 | Features | Malkuth (Reino) | A manifestação no mundo. Plugins opt-in: Raiz, Companion, Feed, Routine Builder. | Vértice |
+
+**1-8 é o OS. Funciona sozinho. É universal.**
+**9-10 é o que faz cada vértice ser único.**
+
+O corte entre 8 e 9 é o corte da Árvore: acima está o que é verdadeiro pra todos. Abaixo está o que se manifesta em cada instância.
+
+### Implicações
+
+O que a gente construiu no MindRoot é muito mais Engine do que parecia. Library, Search, Pipeline, Graph, Projects, Calendar view, Email view — tudo isso é infra universal (camadas 7 e 8), não feature de vértice.
+
+As 4 bocas universais (Captura manual, Email, Calendar, Agent/Filesystem) são infra do Engine — todo vértice nasce com elas. Cada vértice pode adicionar bocas específicas (formulário de diagnóstico no Constellation, fórum no Muda), mas as 4 são chão.
+
+Um vértice é: Home (camada 9) + Features modulares (camada 10) + o Engine OS completo por baixo. O Constellation não vende diagnóstico — entrega o OS configurado. O MindRoot não é "o app" — é a prova viva de que o Engine OS funciona.
+
+*"A geometria não foi adicionada ao design — emergiu dele."*
 
 ---
 
@@ -592,6 +630,7 @@ Regra: cada vertex ganha sua pasta. mindroot/ e V1. constellation/ sera V2. A se
 | 1.1 | 06 Abr 2026 | Centro duplo adicionado ao Pentágono (GUARDIÃO + AUDITOR). Hook 1 do Hexágono atualizado com dois níveis. genesis-build-protocol absorvido em operations/build-protocol.md. |
 | 1.2 | 06 Abr 2026 | Quarta lei adicionada: "o sistema classifica a si mesmo" — todo documento segue Meta-Template. Dois trilhos documentados: Atom (universo) e Pentagono (construcao) andam lado a lado validando um ao outro. Arvore de documentos alinhada com estrutura real do repo. |
 | 1.3 | 07 Abr 2026 | Ciclo de desenvolvimento formalizado: Fundação 5 (job prompt format, 5 campos obrigatórios), Hook 4 (mid-session checkpoint, máx 3 commits), Hook 5 (revert protocol), Deploy protocol (branch strategy + steps). Gaps fechados após auditoria pós-revert. |
+| 1.4 | 08 Abr 2026 | Árvore da Vida: 10 camadas do Engine OS mapeadas às 10 sefirot. 1-8 Engine (universal), 9-10 vértice. 4 bocas universais (Captura, Email, Calendar, Agent). Library/Search/Pipeline/Graph/Projects reconhecidos como infra Engine, não feature de vértice. |
 
 ---
 
