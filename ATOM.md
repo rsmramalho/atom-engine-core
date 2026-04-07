@@ -1,3 +1,27 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     doc                        ║
+║ module:   bridge                     ║
+║ state:    committed                  ║
+║ status:   active                     ║
+║ stage:    7 ○ Circulo                ║
+║ tags:     [#system, #method,         ║
+║            #pilares, #matriz]        ║
+║ source:   claude-project             ║
+║ created:  2026-04-06                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4       ║
+║   → references: Marco Zero v3.1     ║
+║   → references: Meta-Template v1.2  ║
+║   → references: Identidade v1.2     ║
+║   → feeds: PENTAGON.md              ║
+║   → feeds: all CLAUDE.md files      ║
+╚══════════════════════════════════════╝
+
 # Atom — O Método
 
 **Versão:** 1.2

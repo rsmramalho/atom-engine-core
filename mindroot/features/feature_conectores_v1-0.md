@@ -1,3 +1,25 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     spec                       ║
+║ module:   bridge                     ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#feature, #boca,          ║
+║            #oauth, #connectors]      ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4      ║
+║   → feeds: feature_calendar         ║
+║   → feeds: Gmail connector          ║
+║   → feeds: Atom Agent               ║
+╚══════════════════════════════════════╝
+
 # Feature: Conectores
 
 **Versão:** 1.0

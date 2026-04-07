@@ -1,3 +1,22 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     spec                       ║
+║ module:   purpose                    ║
+║ state:    structured                 ║
+║ status:   draft                      ║
+║ stage:    3 △ Triangulo              ║
+║ tags:     [#vertex, #v4-yugar,       ║
+║            #vision, #concept]        ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4      ║
+╚══════════════════════════════════════╝
+
 ---
 title: "Yugar Vision Doc — A Propriedade como Organismo"
 type: spec

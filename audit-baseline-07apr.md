@@ -1,3 +1,23 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     checkpoint                 ║
+║ module:   bridge                     ║
+║ state:    committed                  ║
+║ status:   active                     ║
+║ stage:    7 ○ Circulo                ║
+║ tags:     [#system, #audit,          ║
+║            #baseline]                ║
+║ source:   claude-project             ║
+║ created:  2026-04-07                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4      ║
+║   → references: ATOM.md v1.2        ║
+╚══════════════════════════════════════╝
+
 # Guardião Audit — Baseline 07 Abr 2026
 
 **Modo:** AUDITOR (read-only). Nada foi modificado, nada foi commitado.

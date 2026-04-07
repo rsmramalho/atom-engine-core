@@ -1,3 +1,23 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     spec                       ║
+║ module:   work                       ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#feature, #boca,          ║
+║            #pilar-time, #calendar]   ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → belongs_to: feature_conectores  ║
+║   → references: Genesis v5.0.4      ║
+╚══════════════════════════════════════╝
+
 # Feature: Calendar
 
 **Versão:** 1.0

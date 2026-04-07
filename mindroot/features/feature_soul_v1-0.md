@@ -1,3 +1,25 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     spec                       ║
+║ module:   purpose                    ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#feature, #motor,         ║
+║            #pilar-emotion]           ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4 §4.3 ║
+║   → references: Marco Zero v3.1 §5  ║
+║   → feeds: feature_wrap             ║
+║   → feeds: feature_analytics        ║
+╚══════════════════════════════════════╝
+
 # Feature: Soul
 
 **Versão:** 1.0

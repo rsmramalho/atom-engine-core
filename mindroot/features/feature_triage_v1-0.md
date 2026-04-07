@@ -1,3 +1,24 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     spec                       ║
+║ module:   bridge                     ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#feature, #motor,         ║
+║            #pilar-action, #ai]       ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4 §3.1 ║
+║   → derives: feature_captura        ║
+║   → feeds: feature_pipeline         ║
+╚══════════════════════════════════════╝
+
 # Feature: Triage
 
 **Versão:** 1.0

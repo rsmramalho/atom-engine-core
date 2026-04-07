@@ -1,3 +1,24 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     template                   ║
+║ module:   bridge                     ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#system, #template,       ║
+║            #roadmap, #phi]           ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: Genesis v5.0.4      ║
+║   → references: ATOM.md             ║
+║   → feeds: all ROADMAP.md files     ║
+╚══════════════════════════════════════╝
+
 # Roadmap PHI — Meta-Template v2.0
 ## O Molde dos Roadmaps
 

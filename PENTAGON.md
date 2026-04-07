@@ -1,3 +1,25 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     doc                        ║
+║ module:   bridge                     ║
+║ state:    committed                  ║
+║ status:   active                     ║
+║ stage:    7 ○ Circulo                ║
+║ tags:     [#system, #roadmap,        ║
+║            #pentagono, #vertices]    ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: ATOM.md             ║
+║   → references: Genesis v5.0.4      ║
+║   → feeds: MindRoot ROADMAP.md      ║
+║   → feeds: all vertex roadmaps      ║
+╚══════════════════════════════════════╝
+
 # Pentágono — Master Roadmap
 
 **Versão:** 3.3

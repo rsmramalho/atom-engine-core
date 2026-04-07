@@ -1,3 +1,24 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     doc                        ║
+║ module:   work                       ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#system, #design,         ║
+║            #tokens, #mindroot]       ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: ATOM.md §□          ║
+║   → references: Genesis v5.0.4      ║
+║   → feeds: MindRoot src/index.css   ║
+╚══════════════════════════════════════╝
+
 # MindRoot — Design System (V1)
 
 **Versão:** 1.0

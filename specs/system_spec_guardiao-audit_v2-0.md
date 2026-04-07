@@ -4,21 +4,18 @@
 ║ id:       [a gerar no Supabase]      ║
 ║ type:     spec                       ║
 ║ module:   bridge                     ║
-║ state:    structured                 ║
+║ state:    connected                  ║
 ║ status:   active                     ║
-║ stage:    3 △ Triangulo              ║
-║ tags:     [#system, #audit,          ║
-║            #guardiao, #geometria]    ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#system, #guardiao,       ║
+║            #audit, #centro-duplo]    ║
 ║ source:   claude-project             ║
-║ created:  2026-04-04                 ║
-║ updated:  2026-04-04                 ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
 ╠══════════════════════════════════════╣
 ║ connections:                         ║
-║   → references: Genesis v5.0.2       ║
-║   → references: Meta-Template v1.1   ║
-║   → references: Genesis Build        ║
-║                 Protocol v1.0        ║
-║   → derives: Guardiao Audit v1.0     ║
+║   → references: Genesis v5.0.4       ║
+║   → references: ATOM.md §⬠          ║
 ╚══════════════════════════════════════╝
 
 # Guardiao Audit v2.0

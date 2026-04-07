@@ -11,7 +11,7 @@
 ║            #naming, #geometria]      ║
 ║ source:   claude-project             ║
 ║ created:  2026-04-04                 ║
-║ updated:  2026-04-07                 ║
+║ updated:  2026-04-08                 ║
 ╠══════════════════════════════════════╣
 ║ connections:                         ║
 ║   → references: Genesis v5.0.4       ║

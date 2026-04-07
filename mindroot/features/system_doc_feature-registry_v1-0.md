@@ -1,3 +1,23 @@
+╔══════════════════════════════════════╗
+║          A T O M   E N V E L O P E  ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     doc                        ║
+║ module:   bridge                     ║
+║ state:    connected                  ║
+║ status:   active                     ║
+║ stage:    5 ⬠ Pentagono              ║
+║ tags:     [#system, #registry,       ║
+║            #features]                ║
+║ source:   claude-project             ║
+║ created:  2026-04-05                 ║
+║ updated:  2026-04-08                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → references: all 14 feature specs║
+║   → references: Genesis v5.0.4      ║
+╚══════════════════════════════════════╝
+
 # MindRoot — Feature Registry
 
 **Versão:** 1.0
