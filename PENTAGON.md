@@ -83,7 +83,7 @@ Seeds Espiral 3: Escudo (acoes nos conectores, blocos rituais no Calendar — sc
 **Debt:** ZERO.
 **Deploy:** mindroot.com.au (Vercel)
 **Audit:** 07 Abr 2026 — Honest sync. PENTAGON v3.2 inflava status de F1, F2, F4. Metricas corrigidas.
-**Cross-check:** 07 Abr 2026 — ROADMAP v7.0 synced (mindroot-v2 8e6a06a0). Verificado: git log, ls src/, npx vitest, npm run build.
+**Cross-check:** 07 Abr 2026 — ROADMAP v7.0 synced (mindroot-v2 cf4bc37). Verificado: git log, ls src/, npx vitest, npm run build.
 **Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo).
 
 ### V2 — Constellation OS (paused)
@@ -229,7 +229,7 @@ O PENTAGON.md é revisado:
 | 3.0 | 04 Abr 2026 | Naming: Atom OS→Atom. Genesis sem prefixo. Pentagono: V3=Lab, V4=Yugar, V5=Muda. Atlas → hexagono (propagacao externa, fora do Pentagono). Identity spec v1.0 adicionado. |
 | 3.1 | 05 Abr 2026 | Cross-repo sync: V1 Espiral 2 status real (F2-F4 parciais, 38/52 entregaveis). Atom Agent movido de Seed pra F2 (v0.1 implementado, repo criado). Metricas V1 atualizadas (80 commits, 12.2K LOC). Debt atualizada. |
 | 3.2 | 05 Abr 2026 | Sprint Fechamento Espiral 2 — wrap. V1: F3 19/19 ✓ (soul loop completo, morph, chips), F4 9/9 ✓ (connection prompt, domain filter), F2 14/19 (Gmail #who, calendar tz). Debt→ZERO. Ritual blocks→Seeds. 8 commits, ROADMAP v6.9. |
-| 3.3 | 07 Abr 2026 | Honest sync: V1 Espiral 2 status verificado contra codigo (HEAD 8e6a06a0). F1 Raiz e F2 Conectores nao existem no codebase — status corrigido de done→not started. F4 graph/connections nao construidos — status corrigido de 9/9→parcial. Metricas reais: 63 commits, 156 files, 25.8K LOC, 3 edge fns. Genesis v5.0.4, Identity v1.2. |
+| 3.3 | 07 Abr 2026 | Honest sync: V1 Espiral 2 status verificado contra codigo (HEAD cf4bc37). F1 Raiz e F2 Conectores nao existem no codebase — status corrigido de done→not started. F4 graph/connections nao construidos — status corrigido de 9/9→parcial. Metricas reais: 63 commits, 156 files, 25.8K LOC, 3 edge fns. Genesis v5.0.4, Identity v1.2. |
 
 ---
 
