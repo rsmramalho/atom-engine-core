@@ -22,8 +22,8 @@
 
 # Pentágono — Master Roadmap
 
-**Versão:** 3.3
-**Data:** 07 Abr 2026
+**Versão:** 3.4
+**Data:** 08 Abr 2026
 **Status:** active
 **Princípio:** Cinco vértices, um centro. Atom Engine alimenta todos. O Lab experimenta pra todos.
 
@@ -78,11 +78,11 @@ O estagio 6 (⬡) do Genesis e opcional. O Pentagono (⬠, estagio 5) nao precis
 ### V1 — MindRoot · O Espelho (active)
 
 **Roadmap:** ROADMAP.md no mindroot-v2 (v7.0)
-**Espiral atual:** 2 (Vida — sistema operacional) — F3 entregue, F4 parcial, F1/F2/F5 nao iniciados
+**Espiral atual:** 2 (Vida — sistema operacional) — F1 ✅, F2 ◐ (14/19), F3 ✅, F4 ✅, F5/F6/F7 ⚪
 **Progresso Espiral 1:** COMPLETA ○ (7/7 fases)
-**Progresso Espiral 2:** F3 ✅, F4 ◐, F1 ⚪, F2 ⚪, F5 ⚪ — verificado contra codigo
-**Metricas:** 63 commits, 156 files, ~25.8K LOC, 14 pages, 3 edge functions, 462 testes (24 suites)
-**Princípio:** Motor → Inteligência → Visualização → Reflexão
+**Progresso Espiral 2:** 4/7 fases entregues ou em progresso (PHI v3.0 — 7 fases obrigatorias)
+**Metricas:** 80 commits, 109 files (.ts/.tsx), ~12.2K LOC, 14 pages, 6 edge functions, 14 test files
+**Princípio:** Motor → Bocas → Galhos → Frutos. Presença sobre produtividade.
 
 Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
 - ✅ F1 · Sementes (config, types, type-schemas.json)
@@ -93,19 +93,21 @@ Espiral 1 — Corpo — COMPLETA ○ (03 Abr 2026):
 - ✅ F6 ⬡ Inteligência (AI triage, audit, analytics, testes)
 - ✅ F7 ○ Completude (dark mode, search, export, calendar, offline lite, polish)
 
-Espiral 2 v7.0 — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
-- ⚪ F1 · Raiz — nao iniciada (sem raiz.ts, sem domain builder, sem store)
-- ⚪ F2 — Conectores — nao iniciada (0 connectors, 0 edge fns de conector)
-- ✅ F3 △ Toque + alma — entregue (soul components, triage engine, wrap stepper — commits a2933291→784ee7f7)
-- ◐ F4 □ Biblioteca + grafo — parcial (Library list ✅, search ✅, graph ⚪, connections CRUD ⚪)
+Espiral 2 v7.0 (PHI v3.0 — 7 fases) — "Vida/sistema operacional". Conceito: "se existe no digital, tem como entrar."
+- ✅ F1 · Raiz — done (commits b64511b + a53be24)
+- ◐ F2 — Conectores — em progresso 14/19 (Gmail/Calendar OAuth+sync, Atom Agent v0.1 CLI; falta body.location, AtomDrive, watch mode)
+- ✅ F3 △ Toque + alma — done 19/19 (soul loop, triage Haiku, ItemDetail morph)
+- ✅ F4 □ Biblioteca + grafo — done 9/9 (Library, ConnectionsSection, D3 graph, search filtros)
 - ⚪ F5 ⬠ Companheiro — futuro
+- ⚪ F6 ⬡ Escudo + propagacao — futuro (acoes write nos conectores, propagacao real, stage 6, Corp Shield)
+- ⚪ F7 ○ Completude viva — futuro (PWA offline real, Ollama fallback, Agent v2, onboarding universal)
 
-Seeds Espiral 3: Escudo (acoes nos conectores, blocos rituais no Calendar — scope write), Resiliencia (offline + Ollama), Propagacao (estagio 6 real), Atom Agent v2+ (watch mode, Haiku, Drive scan).
+Seeds Espiral 3: Constellation (V2), Multi-user, Marketplace de connectors, Graph intelligence.
 
 **Debt:** ZERO.
 **Deploy:** mindroot.com.au (Vercel)
-**Audit:** 07 Abr 2026 — Honest sync. PENTAGON v3.2 inflava status de F1, F2, F4. Metricas corrigidas.
-**Cross-check:** 07 Abr 2026 — ROADMAP v7.0 synced (mindroot-v2 cf4bc37). Verificado: git log, ls src/, npx vitest, npm run build.
+**Audit:** 08 Abr 2026 — ROADMAP v7.0 reescrito em PHI v3.0 (7 fases por espiral). F6/F7 da Espiral 2 criadas a partir das antigas seeds.
+**Cross-check:** 08 Abr 2026 — ROADMAP v7.0 (mindroot ui-v2) sync com PENTAGON v3.4.
 **Protocolo:** Genesis Build Protocol v1.0 (CLAUDE.md no repo).
 
 ### V2 — Constellation OS (paused)
@@ -204,7 +206,7 @@ V3 Lab ←——— V1 MindRoot ———→ V5 Muda
 | Guardião Audit v2.0 | Agente de geometria documental — 7 camadas de verificação, de dentro pra fora. | atom-engine-core |
 | Atom Agent v1.0 (spec) | Braco fisico do Atom HS — filesystem scanner, 6 spirais, Python CLI. Implementado em F2. | atom-engine-core |
 | Atom Agent v0.1 (codigo) | CLI funcional: scan, classify, rename, move, index. Repo: rsmramalho/atom-agent. | atom-agent repo |
-| Roadmap PHI Meta-Template v2.0 | Template universal de roadmaps com campo protocol:. | atom-engine-core |
+| Roadmap PHI Meta-Template v3.0 | Template universal de roadmaps. Multiplas espirais, 7 fases obrigatorias, seeds como secao. | atom-engine-core |
 | Atom Identity v1.2 | Nomenclatura definitiva — Atom como universo, Engine como centro, Pentagono 5V, Atlas hexagono. | atom-engine-core (law/) |
 
 ---
@@ -252,6 +254,7 @@ O PENTAGON.md é revisado:
 | 3.1 | 05 Abr 2026 | Cross-repo sync: V1 Espiral 2 status real (F2-F4 parciais, 38/52 entregaveis). Atom Agent movido de Seed pra F2 (v0.1 implementado, repo criado). Metricas V1 atualizadas (80 commits, 12.2K LOC). Debt atualizada. |
 | 3.2 | 05 Abr 2026 | Sprint Fechamento Espiral 2 — wrap. V1: F3 19/19 ✓ (soul loop completo, morph, chips), F4 9/9 ✓ (connection prompt, domain filter), F2 14/19 (Gmail #who, calendar tz). Debt→ZERO. Ritual blocks→Seeds. 8 commits, ROADMAP v6.9. |
 | 3.3 | 07 Abr 2026 | Honest sync: V1 Espiral 2 status verificado contra codigo (HEAD cf4bc37). F1 Raiz e F2 Conectores nao existem no codebase — status corrigido de done→not started. F4 graph/connections nao construidos — status corrigido de 9/9→parcial. Metricas reais: 63 commits, 156 files, 25.8K LOC, 3 edge fns. Genesis v5.0.4, Identity v1.2. |
+| 3.4 | 08 Abr 2026 | Sync com ROADMAP v7.0 (PHI v3.0): Espiral 2 expandida pra 7 fases. F1 Raiz ✅, F2 Conectores ◐ 14/19, F3 ✅, F4 ✅, F5/F6/F7 ⚪. F6 Escudo+propagacao e F7 Completude viva criadas a partir das seeds anteriores. Roadmap PHI Meta-Template referenciado em v3.0. |
 
 ---
 
