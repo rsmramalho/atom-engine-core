@@ -24,8 +24,8 @@
 
 # Atom — O Método
 
-**Versão:** 1.2
-**Data:** 06 Abr 2026
+**Versão:** 1.3
+**Data:** 07 Abr 2026
 **Princípio:** Este documento é a geometria do método. Cada estágio contém todos os anteriores. O triângulo não existe sem a linha. O círculo não existe sem cada estágio antes dele.
 
 ---
@@ -284,6 +284,20 @@ src/
 
 **Regra:** nenhum commit passa sem `vitest run` + `tsc --noEmit` + `npm run build`. Enforcement via hook (ver Hexágono).
 
+### Fundação 5: Job prompt format
+
+Todo job enviado pro Claude Code tem 5 campos obrigatórios. Se qualquer campo estiver ausente, o job não está pronto — não enviar.
+
+| Campo | O que é |
+|-------|---------|
+| **Pilar + célula** | Qual pilar e linha da matriz o job toca (ex: `Action / Estrutura`) |
+| **Objetivo** | O que deve ser verdade no fim — não o que fazer, mas o que deve existir |
+| **Código inline** | Todo código necessário está no job. Sem `cat arquivo`, sem refs externas |
+| **Checkpoint rule** | Máx N commits antes de parar e reportar ao humano |
+| **Gate de saída** | Critério binário de sucesso (`tsc + vitest + build + flow E2E ✅`) |
+
+**Regra:** Claude Code não começa job sem os 5 campos. Para e reporta o que falta.
+
 ---
 
 ## ⬠ Pentágono — A matriz de construção
@@ -434,6 +448,31 @@ REGRA: Nenhum deploy sem:
 
 **Nota:** `CLAUDE.md` permanece na raiz dos repos como instrução executável para o Claude Code — não é documentação, é policy operacional. Referencia o ATOM.md como fonte. Não é absorvido.
 
+### Hook 4: Mid-session checkpoint (cadência obrigatória)
+
+A cada 3 commits, Claude Code para e executa:
+
+1. `git log --oneline -5` — mostra o que foi feito
+2. Reportar ao humano: o que foi feito, o que falta, estado atual (tsc + vitest + build ✅/❌)
+3. Aguardar go/no-go explícito antes de continuar
+
+Se o humano não responder → Claude Code para. Nunca continua sem confirmação.
+
+**Origem:** 8 commits autônomos sem checkpoint geraram regressão que exigiu revert completo (07 Abr 2026).
+
+### Hook 5: Revert protocol
+
+Quando reverter (regressão detectada, build quebrado, estado inconsistente):
+
+1. `git log --oneline` → identificar último commit estável
+2. `git reset --hard [commit-estavel]`
+3. Verificar estado limpo: `tsc --noEmit` + `vitest run` + `npm run build`
+4. `git diff [commit-revertido] HEAD` → documentar o que se perdeu
+5. Reportar ao humano: o que foi revertido, por quê, o que reconstrói
+6. Reconstruir via build protocol (de dentro pra fora) — nunca cherry-pick de código revertido
+
+Revert é sempre documentado no wrap: commit revertido, commit estável, o que reconstrói.
+
 ---
 
 ## ○ Círculo — Operação e replicação
@@ -466,6 +505,23 @@ NEXT:
 Seções vazias omitidas. SOUL opcional. AUDIT automático. NEXT obrigatório.
 Wrap é AtomItem type=wrap, state=committed, genesis_stage=7 (born committed).
 Body JSONB é a fonte canônica. Formato texto é display.
+
+### Deploy protocol
+
+**Branch strategy:**
+- `ui-v2` — branch canônico (produção). Todo trabalho parte daqui.
+- `master` — legacy/divergido. Não tocar.
+- `feature/[nome]` — branches de feature, sempre a partir de `ui-v2`.
+
+**Steps:**
+
+1. `npm run build` local — confirma que builda antes de push
+2. `git push origin ui-v2` → Vercel detecta e faz preview deploy automático
+3. Preview URL → testar em viewport 360×800 (Chrome MCP ou dispositivo real)
+4. Verificar flow E2E do pilar afetado no mobile
+5. Go → produção automática (ui-v2 = produção no Vercel). No-go → fix e repeat.
+
+**Regra:** nenhum push pra `ui-v2` sem step 1 verificado localmente. Vercel não é ambiente de teste — é o destino.
 
 ### Connectors como bocas do sistema
 
@@ -535,6 +591,7 @@ Regra: cada vertex ganha sua pasta. mindroot/ e V1. constellation/ sera V2. A se
 | 1.0 | 06 Abr 2026 | Documento inicial. Nasceu de sessão de recapitulação após 8 sprints revertidos. Formaliza pilares, matriz, fundações, enforcement. |
 | 1.1 | 06 Abr 2026 | Centro duplo adicionado ao Pentágono (GUARDIÃO + AUDITOR). Hook 1 do Hexágono atualizado com dois níveis. genesis-build-protocol absorvido em operations/build-protocol.md. |
 | 1.2 | 06 Abr 2026 | Quarta lei adicionada: "o sistema classifica a si mesmo" — todo documento segue Meta-Template. Dois trilhos documentados: Atom (universo) e Pentagono (construcao) andam lado a lado validando um ao outro. Arvore de documentos alinhada com estrutura real do repo. |
+| 1.3 | 07 Abr 2026 | Ciclo de desenvolvimento formalizado: Fundação 5 (job prompt format, 5 campos obrigatórios), Hook 4 (mid-session checkpoint, máx 3 commits), Hook 5 (revert protocol), Deploy protocol (branch strategy + steps). Gaps fechados após auditoria pós-revert. |
 
 ---
 

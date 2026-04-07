@@ -241,6 +241,28 @@ O PENTAGON.md é revisado:
 
 ---
 
+## Bug lifecycle
+
+### Fonte
+Testador submete relatório com screenshots → bug identificado.
+
+### Ciclo
+
+1. Bug reportado → captura no inbox (`type: task`, `tags: [#bug, #regression]`, `module: work`)
+2. GUARDIÃO identifica: qual pilar, qual componente, reprodução confirmada?
+3. Fix implementado via build protocol (de dentro pra fora)
+4. Regression test criado: 1 teste permanente por bug — nunca deletar
+5. Wrap documenta: bug → fix → test → commit hash
+6. Release note pro testador: HTML simples, linguagem não-técnica, explica o que mudou e como verificar
+
+### Regras
+
+- Nenhum bug fechado sem regression test correspondente
+- Regression tests vivem no agente Regressão (ATOM.md □ Fundação 4)
+- O histórico de bugs é memória do sistema — tudo commitado
+
+---
+
 ## Versionamento
 
 | Versão | Data | Mudança |
