@@ -259,6 +259,8 @@ Cada vertex define: fonte, hex values específicos, componentes (card, chip, inp
 
 Referência canônica do V1: `mindroot/design/design-system.md` + `src/index.css` (tokens CSS).
 
+Referência canônica: `design/design-system.md` — tokens, componentes, BottomNav, 13 telas, estados, animações.
+
 ### Fundação 2: Error handling
 
 **Filosofia:** falhar silenciosamente é pior que mostrar erro. O humano precisa saber o que aconteceu.

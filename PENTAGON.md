@@ -104,6 +104,8 @@ Espiral 2 v7.0 (PHI v3.0 — 7 fases) — "Vida/sistema operacional". Conceito: 
 
 Seeds Espiral 3: Constellation (V2), Multi-user, Marketplace de connectors, Graph intelligence.
 
+- Design System v1.0 commitado (design/design-system.md) — 546 linhas, 10 seções, 13 telas do Atom OS
+
 **Debt:** ZERO.
 **Deploy:** mindroot.com.au (Vercel)
 **Audit:** 08 Abr 2026 — ROADMAP v7.0 reescrito em PHI v3.0 (7 fases por espiral). F6/F7 da Espiral 2 criadas a partir das antigas seeds.
