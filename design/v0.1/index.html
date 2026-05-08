@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atom OS · Design Book v0.1</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #18171a;
+    --bg-card: #201e24;
+    --bg-surface: #1c1a22;
+    --text-heading: #f0ece6;
+    --text-primary: #d4d0cc;
+    --text-secondary: #8a8580;
+    --accent: #7F77DD;
+    --aurora: #c4a882;
+    --zenite: #8a8580;
+    --crepusculo: #7F77DD;
+    --border: rgba(255,255,255,0.06);
+    --m-work: #8a9e7a;
+    --m-body: #b8c4a8;
+    --m-mind: #a89478;
+    --m-family: #d4856a;
+    --m-purpose: #c4a882;
+    --m-bridge: #8a8a8a;
+    --m-finance: #7a9e8a;
+    --m-social: #9e7a8a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 80px 32px 120px; }
+
+  /* ─── HEADER ─── */
+  .doc-header {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .doc-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .doc-title {
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--text-heading);
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+  .doc-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+  }
+  .doc-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ─── MANIFESTO ─── */
+  .manifesto {
+    max-width: 720px;
+    margin: 0 auto 96px;
+    text-align: center;
+  }
+  .manifesto-quote {
+    font-size: 22px;
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .manifesto-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ─── SECTION ─── */
+  .section { margin-bottom: 96px; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-heading);
+    flex: 1;
+    margin-left: 24px;
+  }
+  .section-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  /* ─── TOKENS ─── */
+  .tokens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .token-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .token-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  .swatch-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .swatch-color {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .swatch-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+  }
+  .swatch-hex {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+  }
+  .typo-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+  }
+  .typo-row:first-of-type { border-top: none; padding-top: 0; }
+  .typo-sample {
+    color: var(--text-heading);
+    flex: 1;
+  }
+  .typo-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-secondary);
+  }
+
+  /* ─── SCREEN GRID ─── */
+  .screens-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .screen-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 220ms ease, border-color 220ms ease;
+  }
+  .screen-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(127,119,221,0.25);
+  }
+  .screen-frame {
+    background: var(--bg-surface);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+    aspect-ratio: 393/852;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .screen-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .screen-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .screen-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+  }
+  .screen-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
+  .screen-status.ok {
+    color: var(--m-work);
+    background: rgba(138,158,122,0.12);
+  }
+  .screen-status.delta {
+    color: var(--m-purpose);
+    background: rgba(196,168,130,0.12);
+  }
+  .screen-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-heading);
+    margin-bottom: 4px;
+  }
+  .screen-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  /* ─── PATTERNS ─── */
+  .patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .pattern-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .pattern-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-heading);
+    margin-bottom: 8px;
+  }
+  .pattern-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ─── DELTAS TABLE ─── */
+  .deltas-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .deltas-table tr { border-bottom: 1px solid var(--border); }
+  .deltas-table tr:last-child { border-bottom: none; }
+  .deltas-table td {
+    padding: 14px 0;
+    font-size: 14px;
+    color: var(--text-primary);
+    vertical-align: top;
+  }
+  .deltas-table td.tela {
+    width: 140px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding-right: 24px;
+  }
+
+  /* ─── FOOTER ─── */
+  .doc-footer {
+    margin-top: 96px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .doc-footer-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .doc-footer-symbols {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .screens-grid { grid-template-columns: repeat(2, 1fr); }
+    .tokens-grid { grid-template-columns: 1fr; }
+    .patterns-grid { grid-template-columns: 1fr; }
+    .doc-title { font-size: 32px; }
+    .container { padding: 48px 20px 80px; }
+  }
+  @media (max-width: 600px) {
+    .screens-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <div class="doc-eyebrow">Atom OS · Design Book v0.1</div>
+    <h1 class="doc-title">14 telas · uma linguagem</h1>
+    <p class="doc-subtitle">referência visual canônica do Atom OS — V1 MindRoot</p>
+    <div class="doc-meta">sessão 08 · maio 2026 · Brisbane</div>
+  </header>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <p class="manifesto-quote">"Rick não quer ser mais produtivo. Quer ser mais presente. Os sistemas são o meio — a presença é o fim."</p>
+    <div class="manifesto-attr">princípio fundamental · marco zero v3.1</div>
+  </section>
+
+  <!-- SECTION 1: TOKENS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">tokens canônicos</h2>
+      <span class="section-meta">earth tone · v1 mindroot</span>
+    </div>
+    <div class="tokens-grid">
+
+      <!-- Surfaces -->
+      <div class="token-block">
+        <div class="token-label">surfaces</div>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#18171a"></div><span class="swatch-name">bg</span><span class="swatch-hex">#18171a</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#201e24"></div><span class="swatch-name">card</span><span class="swatch-hex">#201e24</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#1c1a22"></div><span class="swatch-name">surface</span><span class="swatch-hex">#1c1a22</span></div>
+        </div>
+      </div>
+
+      <!-- Accent + Rituals -->
+      <div class="token-block">
+        <div class="token-label">accent + rituais</div>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#7F77DD"></div><span class="swatch-name">accent</span><span class="swatch-hex">#7F77DD</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#c4a882"></div><span class="swatch-name">aurora</span><span class="swatch-hex">#c4a882</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#8a8580"></div><span class="swatch-name">zenite</span><span class="swatch-hex">#8a8580</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#7F77DD"></div><span class="swatch-name">crepúsculo</span><span class="swatch-hex">#7F77DD</span></div>
+        </div>
+      </div>
+
+      <!-- Modules -->
+      <div class="token-block" style="grid-column: span 2;">
+        <div class="token-label">8 módulos · earth tone</div>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#8a9e7a"></div><span class="swatch-name">work</span><span class="swatch-hex">#8a9e7a</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#b8c4a8"></div><span class="swatch-name">body</span><span class="swatch-hex">#b8c4a8</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#a89478"></div><span class="swatch-name">mind</span><span class="swatch-hex">#a89478</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#d4856a"></div><span class="swatch-name">family</span><span class="swatch-hex">#d4856a</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#c4a882"></div><span class="swatch-name">purpose</span><span class="swatch-hex">#c4a882</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#8a8a8a"></div><span class="swatch-name">bridge</span><span class="swatch-hex">#8a8a8a</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#7a9e8a"></div><span class="swatch-name">finance</span><span class="swatch-hex">#7a9e8a</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#9e7a8a"></div><span class="swatch-name">social</span><span class="swatch-hex">#9e7a8a</span></div>
+        </div>
+      </div>
+
+      <!-- Stages -->
+      <div class="token-block" style="grid-column: span 2;">
+        <div class="token-label">7 estágios · genesis</div>
+        <div class="swatch-row">
+          <div class="swatch"><div class="swatch-color" style="background:#8a8580"></div><span class="swatch-name">· 1</span><span class="swatch-hex">inbox</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#9e9488"></div><span class="swatch-name">— 2</span><span class="swatch-hex">classified</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#7a9e8a"></div><span class="swatch-name">△ 3</span><span class="swatch-hex">structured</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#7a8a9e"></div><span class="swatch-name">□ 4</span><span class="swatch-hex">validated</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#7F77DD"></div><span class="swatch-name">⬠ 5</span><span class="swatch-hex">connected</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#9e7a8a"></div><span class="swatch-name">⬡ 6</span><span class="swatch-hex">propagated</span></div>
+          <div class="swatch"><div class="swatch-color" style="background:#c4a882"></div><span class="swatch-name">○ 7</span><span class="swatch-hex">committed</span></div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="token-block">
+        <div class="token-label">tipografia</div>
+        <div class="typo-row"><span class="typo-sample" style="font-size:24px;font-weight:500">DM Sans 500</span><span class="typo-meta">titles</span></div>
+        <div class="typo-row"><span class="typo-sample" style="font-size:16px;font-weight:400">DM Sans 400</span><span class="typo-meta">body</span></div>
+        <div class="typo-row"><span class="typo-sample" style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:1px">JetBrains Mono</span><span class="typo-meta">labels</span></div>
+      </div>
+
+      <!-- Spacing -->
+      <div class="token-block">
+        <div class="token-label">spacing · 4px scale</div>
+        <div style="display:flex;gap:4px;align-items:flex-end;height:60px;margin-top:12px">
+          <div style="width:4px;height:4px;background:var(--accent);opacity:0.3"></div>
+          <div style="width:8px;height:8px;background:var(--accent);opacity:0.4"></div>
+          <div style="width:12px;height:12px;background:var(--accent);opacity:0.5"></div>
+          <div style="width:16px;height:16px;background:var(--accent);opacity:0.6"></div>
+          <div style="width:24px;height:24px;background:var(--accent);opacity:0.7"></div>
+          <div style="width:32px;height:32px;background:var(--accent);opacity:0.8"></div>
+          <div style="width:48px;height:48px;background:var(--accent);opacity:0.9"></div>
+        </div>
+        <div style="display:flex;gap:4px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-secondary);margin-top:8px">
+          <span style="width:4px">4</span><span style="width:8px">8</span><span style="width:12px">12</span><span style="width:16px">16</span><span style="width:24px">24</span><span style="width:32px">32</span><span style="width:48px">48</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: 14 SCREENS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">14 telas · estado atual</h2>
+      <span class="section-meta">7 ✓ executadas · 7 ◐ deltas</span>
+    </div>
+    <div class="screens-grid">
+
+      <!-- 01 HOME PENDENTE -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/01-home-pendente.png" alt="Home Pendente"></div>
+        <div class="screen-meta-row"><span class="screen-num">01a · home</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">home · aurora pendente</div>
+        <div class="screen-note">Estado matinal. Soul check-in vazio, intenção pra preencher.</div>
+      </div>
+
+      <!-- 02 HOME RESPONDIDA -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/02-home-respondida.png" alt="Home Respondida"></div>
+        <div class="screen-meta-row"><span class="screen-num">01b · home</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">home · aurora respondida</div>
+        <div class="screen-note">Resto do dia. Intenção como hero, pulse line da semana, manutenção zero.</div>
+      </div>
+
+      <!-- 03 SEARCH -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/03-search.png" alt="Search"></div>
+        <div class="screen-meta-row"><span class="screen-num">02 · search</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">search</div>
+        <div class="screen-note">Geometry symbols como signature em cada result. Side bands em cor de módulo.</div>
+      </div>
+
+      <!-- 04 PIPELINE -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/04-pipeline.png" alt="Pipeline"></div>
+        <div class="screen-meta-row"><span class="screen-num">03 · pipeline</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">pipeline</div>
+        <div class="screen-note">StageBar com 7 stages + symbols correto. Falta module chip nos items + PT-BR.</div>
+      </div>
+
+      <!-- 05 RAIZ -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/05-raiz.png" alt="Raiz"></div>
+        <div class="screen-meta-row"><span class="screen-num">04 · raiz</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">raiz · 9 domínios</div>
+        <div class="screen-note">9 glifos custom aplicados. Bug "communicat" cortado pendente.</div>
+      </div>
+
+      <!-- 06 ITEM DETAIL -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/06-item-detail.png" alt="Item Detail"></div>
+        <div class="screen-meta-row"><span class="screen-num">05 · item</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">item detail</div>
+        <div class="screen-note">Module chip + meta com △ stage 3 · structured · created 6 abr. Genesis canônico exposto.</div>
+      </div>
+
+      <!-- 07 CALENDAR -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/07-calendar.png" alt="Calendar"></div>
+        <div class="screen-meta-row"><span class="screen-num">06 · calendar</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">calendar · day view</div>
+        <div class="screen-note">Mobile-first sem month grid. Side band 8px em cor de módulo. 4 events corretos.</div>
+      </div>
+
+      <!-- 08 FOCUS -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/08-focus.png" alt="Focus"></div>
+        <div class="screen-meta-row"><span class="screen-num">07 · focus</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">focus session</div>
+        <div class="screen-note">Timer ring claro. Remover "92% FOCUS" (gamification). Item precisa identidade Atom.</div>
+      </div>
+
+      <!-- 09 CONNECTORS -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/09-connectors.png" alt="Connectors"></div>
+        <div class="screen-meta-row"><span class="screen-num">08 · connectors</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">connectors · 4 bocas</div>
+        <div class="screen-note">"Universal Mouths · 3/4 Active" referência canônica. 4 bocas (Captura · Email · Calendar · Agent).</div>
+      </div>
+
+      <!-- 10 EMAIL -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/10-email.png" alt="Email"></div>
+        <div class="screen-meta-row"><span class="screen-num">09 · email</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">gmail inbox · pipeline</div>
+        <div class="screen-note">AI classification pills tracejadas. Falta cor de módulo nos pills + side band nos cards.</div>
+      </div>
+
+      <!-- 11 PROJECTS -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/11-projects.png" alt="Projects"></div>
+        <div class="screen-meta-row"><span class="screen-num">10 · projects</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">projects</div>
+        <div class="screen-note">Top borders com cores inventadas. StageBar com 4 segmentos (deveria ter 7).</div>
+      </div>
+
+      <!-- 12 PULSO -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/12-pulso.png" alt="Pulso"></div>
+        <div class="screen-meta-row"><span class="screen-num">11 · pulso</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">pulso · espelho do sistema</div>
+        <div class="screen-note">Rearquitetada de Analytics. Atenção · Saúde · Rituais · Captura. Sem score.</div>
+      </div>
+
+      <!-- 13 WRAP -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/13-wrap.png" alt="Wrap"></div>
+        <div class="screen-meta-row"><span class="screen-num">12 · wrap</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">wrap · ritual crepúsculo</div>
+        <div class="screen-note">7-dot stepper. Steps precisam mapear pra Genesis Part 3.4. PT-BR + ritual_slot indicator.</div>
+      </div>
+
+      <!-- 14 SETTINGS -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/14-settings.png" alt="Settings"></div>
+        <div class="screen-meta-row"><span class="screen-num">13 · settings</span><span class="screen-status delta">◐ deltas</span></div>
+        <div class="screen-name">configurações</div>
+        <div class="screen-note">Cosmético: PT-BR strings + footer "MindRoot v1.0" no lugar de "Atom OS V0.4.2".</div>
+      </div>
+
+      <!-- 15 LOGIN -->
+      <div class="screen-card">
+        <div class="screen-frame"><img src="screens/15-login.png" alt="Login"></div>
+        <div class="screen-meta-row"><span class="screen-num">14 · login</span><span class="screen-status ok">✓ ok</span></div>
+        <div class="screen-name">login</div>
+        <div class="screen-note">Logo Atom = mesmo glifo identity da Raiz. Consistência visual emergente.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: PADRÕES EMERGENTES -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">padrões emergentes</h2>
+      <span class="section-meta">linguagem visual unificada</span>
+    </div>
+    <div class="patterns-grid">
+
+      <div class="pattern-block">
+        <div class="pattern-name">9 glifos custom da Raiz</div>
+        <div class="pattern-desc">Família geométrica única, stroke 1.5px linecap round. Cada glifo dialoga com a geometria sagrada (· — △ □ ⬠ ⬡ ○) sem ser literal. Reutilizado no logo do Login.</div>
+      </div>
+
+      <div class="pattern-block">
+        <div class="pattern-name">Side band 8px (items)</div>
+        <div class="pattern-desc">Faixa lateral esquerda em cor de módulo, full-height do card. Identificação instantânea em scroll. Aplicado em Calendar, Search, futuramente Wrap/Pipeline/Email.</div>
+      </div>
+
+      <div class="pattern-block">
+        <div class="pattern-name">Top border 3px (containers)</div>
+        <div class="pattern-desc">Borda superior em cor de módulo. Diferenciação semântica vs side band: top = grupo (Project), left = item individual.</div>
+      </div>
+
+      <div class="pattern-block">
+        <div class="pattern-name">Geometry symbol como signature</div>
+        <div class="pattern-desc">Symbols Genesis (· — △ □ ⬠ ⬡ ○) aparecem inline ao lado do título de items, indicando stage atual. Visível em Item Detail, Search, Pipeline.</div>
+      </div>
+
+      <div class="pattern-block">
+        <div class="pattern-name">Two-state Home (aurora)</div>
+        <div class="pattern-desc">Home única com 2 estados: pendente (campos vazios pra check-in matinal) → respondida (intenção como hero, soul colapsado). Manutenção zero.</div>
+      </div>
+
+      <div class="pattern-block">
+        <div class="pattern-name">Pulse line vs Score</div>
+        <div class="pattern-desc">"esta semana · aurora 4/5 · zênite 3/5 · crepúsculo 2/5" — feedback honesto sem +/-, sem percentual de completion. Presença sobre produtividade.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: DELTAS PRO BATCH FIX -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">deltas pro batch fix</h2>
+      <span class="section-meta">consolidação textual</span>
+    </div>
+    <table class="deltas-table">
+      <tr><td class="tela">pipeline</td><td>Side band em cor de módulo (não stage). Items precisam mostrar chip de módulo (não só source pill). Strings PT-BR.</td></tr>
+      <tr><td class="tela">raiz</td><td>Bug "communicat" cortado: font-size 13px + line-clamp 2 nos card labels.</td></tr>
+      <tr><td class="tela">focus</td><td>Remover "92% FOCUS" stat (gamification). Item em foco precisa module chip + geometry symbol. PT-BR.</td></tr>
+      <tr><td class="tela">email</td><td>AI classification pills com cor de módulo (work/body/mind), não accent uniforme. Cards com side band 8px.</td></tr>
+      <tr><td class="tela">projects</td><td>Top borders nos módulos certos (Atlas Q2 e Constellation são work verde). StageBar com 7 segmentos completos.</td></tr>
+      <tr><td class="tela">wrap</td><td>Tudo em PT-BR. 7 steps amarrados ao Genesis Part 3.4 (CRIADOS / MODIFICADOS / DECIDIDOS / CONEXÕES / SEMENTES / ALMA / PRÓXIMO). Header com pill "· crepúsculo". Decision cards com side band em cor de módulo.</td></tr>
+      <tr><td class="tela">settings</td><td>Strings PT-BR. Header lowercase "configurações". Footer "MindRoot v1.0" no lugar de "Atom OS V0.4.2".</td></tr>
+      <tr><td class="tela">sistêmico</td><td>Top border (container) vs side band (item) — manter dual semântico, registrar no design-system.md. Glifos custom da Raiz reutilizáveis em qualquer ícone de domínio.</td></tr>
+    </table>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="doc-footer">
+    <div class="doc-footer-line">próximo passo · batch fix das 7 telas com deltas</div>
+    <div class="doc-footer-line" style="opacity:0.6">depois · handoff pro claude code → mindroot-v2 master</div>
+    <div class="doc-footer-symbols">·  —  △  □  ⬠  ⬡  ○</div>
+  </footer>
+
+</div>
+</body>
+</html>
