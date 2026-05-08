@@ -257,6 +257,8 @@ Aurora (quente), zênite (neutro), crepúsculo (frio). Cada período do dia tem 
 **Implementação por vertex:**
 Cada vertex define: fonte, hex values específicos, componentes (card, chip, input, button), spacing scale, border-radius, e qualquer token adicional. Vive em `[vertex]/design/design-system.md`.
 
+**Referência canônica da semente:** `law/atom-brand-identity.md` — cores universais, logo, padrões de componente, regras semente vs fruto.
+
 Referência canônica do V1: `mindroot/design/design-system.md` + `src/index.css` (tokens CSS).
 
 Referência canônica: `design/design-system.md` — tokens, componentes, BottomNav, 13 telas, estados, animações.
@@ -607,7 +609,8 @@ atom-engine-core/
 │   ├── genesis.md
 │   ├── marco-zero.md
 │   ├── meta-template.md
-│   └── identidade.md
+│   ├── identidade.md
+│   └── brand-identity.md
 │
 ├── mindroot/                  ← V1 (o visualizador)
 │   ├── roadmap.md
