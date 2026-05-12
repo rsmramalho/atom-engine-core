@@ -2,11 +2,13 @@
 id: migration-plan-v1
 title: Plano de migração Project-by-Project pós-D-007
 date: 2026-05-12
+updated: 2026-05-13
 status: draft
 type: spec
 module: bridge
 stage: 5
 references: [D-004, D-005, D-006, D-007, Identidade v1.3, Genesis v5.0.4]
+refined_by: D-008
 feeds:
   - law/system_spec_espiral-do-trabalho_v1-0.md
   - law/system_spec_espiral-pessoal_v1-0.md
@@ -76,28 +78,33 @@ Esta resolução é refletida no ADR D-007 (edit in-place, §5 trocada de "Pend�
 
 ---
 
-## 4 — Matriz Project → destino (16 linhas)
+## 4 — Matriz Project → destino (21 linhas — pós D-008)
 
-| # | Project (Claude.ai) | Status atual | Destino canônico | Ação | Onda |
-|---|---------------------|--------------|-----------------|------|------|
-| 1 | Marco 0 (este) | ativo | Marco 0 (intocado) | nada | — |
-| 2 | O Espaço Entre / Project E. | ativo | standalone | nada | — |
-| 3 | Atom OS / Atom Engine 4.0 | vortex parental | KB histórica · Marco 0 | **arquivar** (renomear `[ARCHIVED]`) | Onda 3 |
-| 4 | Atom Drive | superado por D-005 | — | **arquivar** | Onda 3 |
-| 5 | Ramalho OS | geração 1 lineage | — | **arquivar** | Onda 3 |
-| 6 | MindRoot v1 | superado por mindroot-v2 | — | **arquivar** | Onda 3 |
-| 7 | Anthropic | KB duplicada | — | **arquivar** | Onda 3 |
-| 8 | Macro Vision | KB duplicada | — | **arquivar** | Onda 3 |
-| 9 | Constellation System | ativo/pausado | Espiral do Trabalho · V2 | **consolidar** em V2 | Onda 1 |
-| 10 | Constellation OS | ativo/pausado | Espiral do Trabalho · V2 | **consolidar** em V2 | Onda 1 |
-| 11 | Atlas Frames Ecossistema | ativo | Espiral do Trabalho · V2 + ⬡ | **consolidar** (cluster Constellation) | Onda 1 |
-| 12 | Atlas Atom (sistema construtivo) | ativo | Espiral do Trabalho · V3 Lab | **migrar KB** (R&D Lab → Atlas Frames) | Onda 1 |
-| 13 | Mt Samson / Yugar Commons | ativo | **split** | **dividir** (ver §5) | Onda 2 |
-| 14 | MUDA | concept | Espiral do Trabalho · V5 | **migrar KB** | Onda 1 |
-| 15 | MindRoot Kids | concept | Espiral Pessoal · frente cíclica | **migrar KB** (ciclo: Pessoal → Marco 0 → Pessoal) | Onda 1 |
-| 16 | _slot reservado_ | a confirmar | a confirmar | confirmar na Onda 0 | Onda 0 |
+| # | Project no painel | Destino canônico | Onda |
+|---|-------------------|------------------|------|
+| 1 | Espiral Pessoal | Pessoal (canônico, vivo) | 1 ✓ |
+| 2 | Espiral do Trabalho | Trabalho (canônico, vivo) | 1 ✓ |
+| 3 | Marco 0 | Marco 0 (intocado) | — |
+| 4 | Atlas Atom | Trabalho · V4 Yugar (cluster Atlas) | 1 |
+| 5 | Atlas Lab - Workshop Shed Container | Trabalho · V4 Yugar (cluster Atlas) | 1 |
+| 6 | Cockpit - Atom Sim | arquivar (resíduo D-005) | 3 |
+| 7 | Project E. | Pessoal · projeto pessoal | 1 |
+| 8 | Rubens | Pessoal · frente arquivo pessoal | 1 |
+| 9 | Atom Entre | standalone (= O Espaço Entre) | — |
+| 10 | Atom Drive | arquivar | 3 |
+| 11 | Anthropic | arquivar | 3 |
+| 12 | Macro Vision | arquivar | 3 |
+| 13 | CONSTELLATION SYSTEM v1 (documento) | Trabalho · Frente Constellation | 1 |
+| 14 | CONSTELLATION SYSTEM OS | Trabalho · Frente Constellation | 1 |
+| 15 | Rob super Landing page | Trabalho · V4 Yugar (cluster Atlas) | 1 |
+| 16 | Atom Claude | arquivar (= primeira versão MindRoot) | 3 |
+| 17 | Atom Engine 4.0 | arquivar (= Atom OS predecessor) | 3 |
+| 18 | Ramalho Os | arquivar | 3 |
+| 19 | 1874 Mount Samson (Sub Division) | split — terra+família → Pessoal, venture → Trabalho V4 | 2 |
+| 20 | MindMate Tag V1 | arquivar (sistema tagging abandonado) | 3 |
+| 21 | How to use Claude | ignorar (example Anthropic) | — |
 
-**Onda 0 (pré-execução):** Cowork lista os 16 Projects no painel do Rick e confirma o nome do slot #16 (se houver Project não identificado nesta matriz). Sem essa confirmação binária, a migração não começa.
+**Onda 0 (fechada em D-008, 13 Mai 2026):** snapshot do painel via Cowork confirmou 21 entradas. 6 Projects não mapeados pelo plan-v1 v1.0 foram classificados, 3 "fantasmas" reclassificados (ver §9). Constellation = frente transversal (não V2). V3 Lab nomeado Yugar Lab. Cluster Atlas mora em V4 Yugar.
 
 ---
 
@@ -141,37 +148,40 @@ Conforme doc-lei Pessoal §5: nasce na Pessoal (intuição familiar), eventualme
 - [ ] Outputs os 2 system prompts em arquivo local pra Rick colar
 - [ ] Arca atualiza esta tabela com nome confirmado de #16 antes da execução
 
-### Onda 1 — Criação + migração de novos cluster (8 Projects)
+### Onda 1 — Criação + migração de KB (9 Projects)
 
-- [ ] **Rick cria 2 Projects Claude.ai:**
-  - "Espiral do Trabalho" — cola system prompt
-  - "Espiral Pessoal" — cola system prompt
-- [ ] **Migrar KB para Espiral do Trabalho:**
-  - Constellation System → V2
-  - Constellation OS → V2
-  - Atlas Frames Ecossistema → V2 + ⬡
-  - Atlas Atom → V3 Lab
-  - MUDA → V5
-- [ ] **Migrar KB para Espiral Pessoal:**
-  - MindRoot Kids → frente cíclica
+- [x] **Rick criou 2 Projects Claude.ai (Onda 0):**
+  - "Espiral do Trabalho" — system prompt colado
+  - "Espiral Pessoal" — system prompt colado
+- [ ] **Migrar KB para Espiral do Trabalho (5 Projects):**
+  - CONSTELLATION SYSTEM v1 (documento) → Frente Constellation
+  - CONSTELLATION SYSTEM OS → Frente Constellation
+  - Atlas Atom → V4 Yugar (cluster Atlas)
+  - Atlas Lab - Workshop Shed Container → V4 Yugar (cluster Atlas)
+  - Rob super Landing page → V4 Yugar (cluster Atlas)
+- [ ] **Migrar KB para Espiral Pessoal (2 Projects + memórias):**
+  - Project E. → projeto pessoal
+  - Rubens → frente arquivo pessoal
   - Memórias #1 + #5 Atom Drive → frente Arquivo pessoal
 
 ### Onda 2 — Splits (1 Project, 2 destinos)
 
-- [ ] **Mt Samson split:**
+- [ ] **Mt Samson split (1874 Mount Samson Sub Division):**
   - terra + família + hipoteca + Daniel → Espiral Pessoal
   - venture Airbnb + grants + co-op → Espiral do Trabalho V4
 - [ ] **Inserir pointers cruzados** nos system prompts dos dois lados
 
-### Onda 3 — Arquivamento (6 Projects)
+### Onda 3 — Arquivamento (8 Projects)
 
-- [ ] Renomear no painel Claude.ai:
-  - `Atom OS` → `[ARCHIVED] Atom Engine 4.0`
-  - `Atom Drive` → `[ARCHIVED] Atom Drive`
-  - `Ramalho OS` → `[ARCHIVED] Ramalho OS`
-  - `MindRoot` (v1) → `[ARCHIVED] MindRoot v1`
-  - `Anthropic` → `[ARCHIVED] Anthropic Project`
-  - `Macro Vision` → `[ARCHIVED] Macro Vision`
+- [ ] Renomear no painel Claude.ai com prefixo `[ARCHIVED]`:
+  - `Atom Engine 4.0` (= Atom OS predecessor)
+  - `Cockpit - Atom Sim` (resíduo D-005)
+  - `Atom Drive`
+  - `Ramalho Os`
+  - `Anthropic`
+  - `Macro Vision`
+  - `Atom Claude` (= primeira versão MindRoot)
+  - `MindMate Tag V1` (sistema tagging abandonado)
 - [ ] **Não deletar** nesta rodada — preserva histórico até validação da nova topologia
 - [ ] Memória #4 Atom Drive: deletar (datada, superada por D-007)
 
@@ -211,13 +221,23 @@ Se qualquer item falha: o Project fica como `migrating` e bloqueia a Onda seguin
 
 ---
 
-## 9 — Pendências abertas (não bloqueadoras)
+## 9 — Fantasmas reclassificados
 
-1. **Slot #16** — confirmar nome na Onda 0 ou aceitar que minei só 15 únicos
-2. **Cluster Constellation** — durante Onda 1, definir se Constellation System + Constellation OS + Atlas Frames Ecossistema viram **um corpo único** em V2 ou **3 sub-frentes** dentro de V2
-3. **AtlasLab vs Yugar Lab vs V3** — confirmar se os 3 nomes referem-se à mesma frente operacional ou se há sub-divisões (D-007 já consolidou em "V3 Lab", mas KB pode ter sub-rótulos)
+Em D-008 (13 Mai 2026), 3 entradas do plan-v1 v1.0 foram reclassificadas como **conceitos**, não Projects a migrar:
 
-Essas pendências não bloqueiam o início da Onda 1. Resolução acontece durante a execução, registrada em mini-wraps.
+- **MUDA** — vértice V5 do Pentágono. Vive como sub-frente da Espiral do Trabalho via system prompt. Sem KB própria por enquanto.
+- **MindRoot Kids** — frente cíclica conceitual da Espiral Pessoal. Vive no system prompt da Pessoal. Sem KB própria.
+- **MindRoot v1** — predecessor histórico do app, deletado ou consolidado em Atom Claude (que vai pra arquivar na Onda 3). Sem ação adicional.
+
+Esses 3 saem da lista de Projects a migrar. Cruzamento empírico com o painel via snapshot Cowork confirmou ausência.
+
+### Pendências resolvidas em D-008
+
+As 3 pendências da v1.0 foram fechadas pelo snapshot empírico:
+
+- ~~Slot #16~~ → topologia ampliada pra 21 entradas (não há slot vazio)
+- ~~Cluster Constellation~~ → resolvido: Frente Constellation transversal (D-008 §2)
+- ~~AtlasLab vs Yugar Lab vs V3~~ → resolvido: V3 = Yugar Lab oficial, Atlas Lab = white label (D-008 §3)
 
 ---
 
@@ -226,6 +246,7 @@ Essas pendências não bloqueiam o início da Onda 1. Resolução acontece duran
 | Versão | Data | Mudança |
 |--------|------|---------|
 | 1.0 | 12 Mai 2026 | Documento inaugural. Plano executivo de migração Project-by-Project pós-D-007. Resolve D-007 §5 (memórias Atom Drive). Define 4 ondas, matriz 16 Projects, critério binário, splits explícitos. |
+| 1.1 | 2026-05-13 | Refinado por D-008. Tabela §4 ampliada (15→21 linhas). Contagens Onda 1 (7→9) e Onda 3 (6→8) atualizadas. Nova §9 sobre fantasmas reclassificados (MUDA, MindRoot Kids, MindRoot v1). |
 
 ---
 
