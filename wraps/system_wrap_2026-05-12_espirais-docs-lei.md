@@ -1,3 +1,30 @@
+╔══════════════════════════════════════╗
+║          A T O M   W R A P           ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     wrap                       ║
+║ module:   bridge                     ║
+║ state:    connected                  ║
+║ status:   completed                  ║
+║ stage:    7 ○ Círculo                ║
+║ tags:     [#wrap, #espirais,         ║
+║            #docs-lei, #d-007,        ║
+║            #topologia, #pentagono,   ║
+║            #crepusculo]              ║
+║ source:   claude-project             ║
+║ created:  2026-05-12                 ║
+║ updated:  2026-05-12                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → continues: mineracao-topologia   ║
+║   → continues: audit-e-topologia     ║
+║   → references: Espiral do Trabalho  ║
+║   → references: Espiral Pessoal      ║
+║   → references: D-007                ║
+║   → references: Identidade v1.3      ║
+║   → feeds: plano de migração         ║
+╚══════════════════════════════════════╝
+
 # ATOM WRAP — 12 Mai 2026 (espirais-docs-lei)
 
 **Tema:** docs-lei das 2 Espirais novas + ADR D-007 commitados em PR único
