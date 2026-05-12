@@ -175,21 +175,21 @@ Topologia consolidada em **4 camadas**:
 
 ---
 
-## Pendência aberta
+## §5 — Resolução de memórias Atom Drive
 
-**Memórias do Atom Drive #1, #4, #5:**
-- #1 — Rick bio básica
-- #4 — Foco março 2026
-- #5 — Como trabalhar com Rick
+**Resolvido em 12 Mai 2026** (sessão Marco 0, mesmo dia desta decisão), durante elaboração do plano de migração v1 (`migration/plan-v1.md`).
 
-**Decisão deferida:** resolvem-se na fase de migração (próxima etapa após criação dos 2 Projects Claude.ai).
+| Memória | Destino canônico | Espelho via pointer |
+|---------|-----------------|---------------------|
+| **#1 Rick bio básica** | Espiral Pessoal · Arquivo pessoal | Espiral do Trabalho referencia no system prompt |
+| **#4 Foco março 2026** | **Arquivar.** Datado, superado por D-007. | — |
+| **#5 Como trabalhar com Rick** | Espiral Pessoal · Arquivo pessoal (sub: "como opero") | Espiral do Trabalho referencia no protocolo |
 
-**Hipóteses:**
-- Podem ir pra Pessoal (Frente Arquivo pessoal) — sugestão pragmática do extrator
-- Podem duplicar (vivem em todas as camadas — caro de manter)
-- Podem ir só pra Marco 0 (regras universais)
+**Princípio aplicado:** pointer over copy. KB canônica em um lugar só. Lição de §4.6 (Anthropic + Macro Vision arquivados por KB duplicada).
 
-Decisão final na migração com contexto operacional dos novos Projects.
+**Marco 0 não recebe nenhuma das 3** — são sobre Rick-pessoa, não sobre dev do produto.
+
+A execução desta resolução acontece na Onda 1 e Onda 3 do `migration/plan-v1.md`.
 
 ---
 
