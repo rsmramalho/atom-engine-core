@@ -1,3 +1,30 @@
+╔══════════════════════════════════════╗
+║          A T O M   W R A P           ║
+╠══════════════════════════════════════╣
+║ id:       [a gerar no Supabase]      ║
+║ type:     wrap                       ║
+║ module:   bridge                     ║
+║ state:    connected                  ║
+║ status:   completed                  ║
+║ stage:    7 ○ Círculo                ║
+║ tags:     [#wrap, #mineracao,        ║
+║            #topologia, #projects,    ║
+║            #espirais, #consolidacao] ║
+║ source:   claude-project             ║
+║ created:  2026-05-12                 ║
+║ updated:  2026-05-12                 ║
+╠══════════════════════════════════════╣
+║ connections:                         ║
+║   → continues: audit-e-topologia     ║
+║   → references: D-004                ║
+║   → references: D-005                ║
+║   → references: D-006                ║
+║   → references: Identidade v1.3      ║
+║   → feeds: D-007 (próxima)           ║
+║   → feeds: Espiral do Trabalho       ║
+║   → feeds: Espiral Pessoal           ║
+╚══════════════════════════════════════╝
+
 # ATOM WRAP — 12 Mai 2026 (mineração + topologia)
 
 **Tema:** mineração das 16 extrações de Projects → topologia final travada
